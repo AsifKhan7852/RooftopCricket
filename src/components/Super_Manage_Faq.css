@@ -1,0 +1,225 @@
+.super-manage-faq {
+    height: 47.5vw;
+    width: 99.8%;
+    overflow-y: auto;
+}
+
+.super-manage-faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.super-manage-faq-header h4 {
+    margin: 0 35vw;
+    font-size: 1.7vw;
+}
+
+.super-manage-faq-body {
+    height: auto;
+    display: flex;
+}
+
+.super-manage-faq-img,
+.super-faq-main {
+    width: 50%;
+    height: 100%;
+}
+
+.super-manage-faq-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.super-faq-header {
+    border: 1px solid rgb(75, 233, 233);
+    background-color: rgb(4, 167, 118);
+    height: 11vw;
+    width: 62vw;
+    margin: 0 17vw;
+    opacity: 0.3;
+    border-radius: 2vw;
+    padding: 0 1vw;
+}
+
+.super-faq-heading {
+    margin-top: 1vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.super-faq-heading-text {
+    border: 1px solid white;
+    margin-top: 0.5vw;
+    height: 6.5vw;
+    border-radius: 1vw;
+}
+
+.super-faq-heading-text h4 {
+    display: flex;
+    justify-content: center;
+    line-height: 0vw;
+    font-size: 1.7vw;
+}
+
+.super-faq-body {
+    border: 1px solid rgb(75, 233, 233);
+    background-color: rgb(59, 250, 193);
+    height: auto;
+    width: 62vw;
+    margin: 1.5vw 17vw;
+    opacity: 0.3;
+    border-radius: 2vw;
+    padding: 1vw 1vw;
+}
+
+.super-faq-border {
+    border: 2px solid white;
+    margin-top: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+}
+
+.super-faq-body-text {
+    border: 1px solid white;
+    background-color: rgb(4, 167, 118);
+    margin-top: 0.5vw;
+    height: auto;
+    border-radius: 1vw;
+    padding: 0.7vw 1vw;
+}
+
+.super-faq-body-text1 {
+    border: 1px solid white;
+    margin-top: 0.5vw;
+    height: auto;
+    border-radius: 1vw;
+    padding: 0 1vw;
+}
+
+.super-faq-question {
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    padding: 0.3vw 1vw;
+    margin-top: 1vw;
+    color: rgb(15, 15, 15);
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.super-faq-btn {
+    width: 50%;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    margin-left: 32vw;
+    text-align: right;
+}
+
+.super-faq-input {
+    width: 100%;
+    padding: 0.3vw 1vw;
+    border-radius: 0.3vw;
+    border: 1px solid #ccc;
+    font-size: 1.5vw;
+}
+
+.super-faq-textarea {
+    width: 100%;
+    height: 5vw;
+    padding: 0.5vw 1vw;
+    border-radius: 0.3vw;
+    border: 1px solid #ccc;
+    font-size: 1.5vw;
+    resize: none;
+}
+
+.super-faq-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5vw;
+}
+
+.super-faq-button {
+    padding: 0.3vw 1vw;
+    margin-left: 0.5vw;
+    border-radius: 0.3vw;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+.super-faq-button.save {
+    background-color: rgb(4, 167, 118);
+    color: white;
+}
+
+.super-faq-button.cancel {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.super-faq-button.edit {
+    background-color: #ffa500;
+    color: white;
+}
+
+.super-faq-button.delete {
+    background-color: #ff0000;
+    color: white;
+}
+
+.super-faq-button.add {
+    background-color: rgb(4, 167, 118);
+    color: white;
+    padding: 1vw 1.5vw;
+    font-size: 1.3vw;
+    width: 10vw;
+}
+
+.super-faq-answer-line {
+    line-height: 1.5;
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+/* Spinner Styles */
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+}
+
+.spinner {
+    border: 0.4vw solid #f3f3f3;
+    border-top: 0.4vw solid rgb(4, 167, 118);
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    animation: spin 1s linear infinite;
+}
+
+.spinner-container p {
+    margin-top: 0.5vw;
+    font-size: 1.5vw;
+    color: white;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(1vw); }
+    100% { opacity: 1; transform: translateY(0); }
+}

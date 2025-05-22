@@ -1,0 +1,85 @@
+.register_terms {
+    height: 100vh;
+    width: 99.8%;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.register_term_head {
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.register_term_head h4 {
+    margin: 0vw 35vw;
+    font-size: 1.7vw;
+}
+
+.register_term_subhead {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+}
+
+.register_term_body {
+    height: auto;
+    display: flex;
+}
+
+.register_term_img {
+    width: 50%;
+    height: 100%;
+}
+
+.register_term_text {
+    margin-left: 4vw;
+    width: 50%;
+    height: 100%;
+}
+
+.register_term_text1 {
+    margin-left: 10vw;
+    width: 45vw;
+    height: auto;
+}
+
+.register_term_text1 h4 {
+    font-size: 1.6vw;
+    margin-top: 0vw;
+}
+
+.register_term_text1 p {
+    font-size: 1.5vw;
+    margin-top: -1.5vw;
+}
+
+.register_term_img img {
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+}
+
+.register_term_btn {
+    width: 50%;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    margin-left: 17vw;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+.register_term_btn button {
+    padding: 0.8vw 2vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: rgb(4, 167, 118);
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}

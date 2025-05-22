@@ -1,0 +1,224 @@
+.usign_container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.usign_img_wrapper {
+    height: 99%;
+    width: 50%;
+}
+
+.usign_img_wrapper img {
+    width: 97%;
+    height: 99%;
+    animation: floatImg 3s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.usign_text_section {
+    height: 93%;
+    width: 50%;
+    padding-top: 3vw;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.usign_text_section h2 {
+    font-size: 3vw;
+    transition: transform 0.3s;
+}
+
+.usign_text_section h2:hover {
+    transform: scale(1.03);
+    color: rgb(5, 196, 154);
+}
+
+.usign_text_section p {
+    font-size: 1.5vw;
+    margin-top: -2vw;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.usign_text_section p:hover {
+    color: #333;
+}
+
+.usign_form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.usign_forget {
+    float: right;
+    margin-right: 21vw;
+    color: rgb(5, 196, 154);
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 1.3vw;
+}
+
+.usign_forget:hover {
+    color: #069478;
+    text-decoration: underline;
+}
+
+/* Reuse width for all inputs and match button */
+.usign_input {
+    width: 28vw;
+}
+
+.usign_form input {
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid rgb(83, 83, 83);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.usign_form input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(5, 196, 154, 0.6);
+    transform: scale(1.01);
+}
+
+.usign_form button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 0;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 1vw;
+    width: 29.3vw;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.usign_form button:hover:enabled {
+    background-color: #04b89e;
+    transform: scale(1.02);
+}
+
+.usign_form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.usign_or {
+    display: flex;
+    align-items: center;
+    width: 31vw;
+    margin: 1vw 0 0 0vw;
+}
+
+.usign_or hr {
+    border: none;
+    border-top: 1px solid rgb(83, 83, 83);
+    flex: 1;
+}
+
+.usign_or h4 {
+    margin: 0 0.5vw;
+    font-size: 1.2vw;
+    color: rgb(28, 27, 27);
+}
+
+.usign_signup {
+    display: flex;
+    align-items: center;
+    margin: 0.5vw 0 0 4.5vw;
+    width: fit-content;
+}
+
+.usign_signup p {
+    margin: 0;
+    font-size: 1.3vw;
+}
+
+.usign_signup a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-left: 0.5vw;
+    color: rgb(5, 196, 154);
+    transition: color 0.3s;
+}
+
+.usign_signup a:hover {
+    color: #04a78c;
+    text-decoration: underline;
+}
+
+.usign_message_box {
+    background-color: #ffe0e0;
+    border: 1px solid #ff5c5c;
+    color: #cc0000;
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 0.8vw 1vw;
+    border-radius: 0.8vw;
+    margin-top: 1vw;
+    width: 29.3vw;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease;
+}
+
+.usign_password_container {
+    position: relative;
+    display: inline-block;
+    width: 29.3vw;
+}
+
+.usign_toggle_password {
+    position: absolute;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2vw;
+    color: #555;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.usign_toggle_password:hover {
+    color: #000;
+}
+
+.dual-ring-spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.dual-ring-spinner:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-color: white transparent white transparent;
+    animation: dual-ring 1.2s linear infinite;
+}
+
+@keyframes dual-ring {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

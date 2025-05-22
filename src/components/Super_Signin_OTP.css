@@ -1,0 +1,110 @@
+.super-otp-container {
+  display: flex;
+  height: 105vh;
+}
+
+.super-otp-left-panel {
+  width: 50%;
+}
+
+.super-otp-left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.super-otp-right-panel {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 5vw;
+}
+
+.super-otp-card {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 90%;
+}
+
+.super-otp-content {
+  text-align: center;
+}
+
+.super-otp-content h2 {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.super-otp-content p {
+  color: black;
+  font-size: 14px;
+}
+
+.super-otp-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.super-otp-input-group input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.super-otp-verify-btn {
+background-color:rgb(5, 196, 154);
+  color: white;
+  padding: 10px 20px;
+  width: 15vw;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Keep same background color on hover */
+.super-otp-verify-btn:hover {
+   background-color:rgb(48, 250, 206);
+}
+
+.super-otp-resend-btn {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  width: 15vw;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Keep same background color on hover */
+.super-otp-resend-btn:hover {
+  background-color: rgb(243, 182, 68);
+}
+
+.super-otp-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.super-otp-hand img {
+  width: 18vw;
+  height: auto;
+  margin-left: 3vw;
+}
+
+.super-otp-error {
+  color: red;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}

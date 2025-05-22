@@ -1,0 +1,160 @@
+.supersignin-container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.supersignin-image {
+    height: 99.3%;
+    width: 53%;
+}
+
+.supersignin-image img {
+    width: 97%;
+    height: 99.3%;
+}
+
+.floating-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.supersignin-content {
+    height: 93%;
+    width: 47%;
+    padding-top: 3vw;
+}
+
+.supersignin-content h2 {
+    font-size: 3vw;
+}
+
+.supersignin-content p {
+    font-size: 1.5vw;
+    margin-top: -2vw;
+    font-weight: 500;
+}
+
+.supersignin-form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.supersignin-form input {
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid rgb(83, 83, 83);
+    width: 30vw;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supersignin-form input:hover,
+.supersignin-form input:focus {
+    border-color: #2CDA9D;
+    box-shadow: 0 0 5px rgba(44, 218, 157, 0.4);
+    outline: none;
+}
+
+.supersignin-form button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 15.5vw;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 0.5vw;
+    cursor: pointer;
+    width: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.supersignin-form button:hover:not(:disabled) {
+    background-color: #2CDA9D;
+    transform: translateY(-2px);
+}
+
+.supersignin-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Dual Ring Spinner */
+.dual-ring-spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.dual-ring-spinner:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-color: white transparent white transparent;
+    animation: dual-ring-spin 1.2s linear infinite;
+}
+
+@keyframes dual-ring-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.supersignin-password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.supersignin-password-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.supersignin-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.supersignin-error {
+    color: red;
+    margin-bottom: 1vw;
+    font-weight: 500;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-5px);
+    }
+    40%, 80% {
+        transform: translateX(5px);
+    }
+}

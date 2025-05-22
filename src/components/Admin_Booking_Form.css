@@ -1,0 +1,154 @@
+.admin-bookform {
+    height: 47.5vw;
+    width: 99.8%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.admin-bookform-head {
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.admin-bookform-head h4 {
+    margin: 0vw 38vw;
+    font-size: 1.9vw;
+}
+
+.admin-selected-slot-heading {
+    margin-left: 6.5vw;
+    font-size: 1.3vw;
+}
+
+.admin-selected-slot-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 6.5vw 0 6.5vw;
+}
+
+.admin-input-fields {
+    display: flex;
+    gap: 1vw;
+}
+
+.admin-input-fields input {
+    padding: 0.5vw 1vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+
+.admin-bookform-body {
+    display: flex;
+    height: 84.5%;
+}
+
+.admin-bookform-text {
+    height: 100%;
+    width: 60%;
+}
+
+.admin-bookform-table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1vw;
+    width: 85vw;
+    margin-left: 6.5vw;
+    position: relative;
+}
+
+.admin-bookform-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+}
+
+.admin-bookform-custom-table th,
+.admin-bookform-custom-table td {
+    padding: 0.5vw 2vw;
+    border: 1px solid #4e9c9c;
+    text-align: center;
+}
+
+.admin-bookform-custom-table th {
+    background-color: #408080;
+}
+
+.admin-bookform-button {
+    background-color: #346464;
+    color: white;
+    border: none;
+    margin: 0vw 0.5vw;
+    padding: 1vw 3vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-bookform-button:hover {
+    background-color: #346464;
+}
+
+.admin-bookform-img {
+    height: 100%;
+    width: 40%;
+}
+
+.admin-bookform-img img {
+    width: 100%;
+    height: 100%;
+    margin-top: 7vw;
+    opacity: 10%;
+}
+
+.admin-bookform-btn-container {
+    align-self: flex-end;
+    margin-top: 1vw;
+}
+
+.admin-bookform-btn {
+    background-color: #346464;
+    color: white;
+    border: none;
+    padding: 0.7vw 3vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.admin-bookform-btn:hover {
+    background-color: #408080;
+}
+
+.admin-bookform-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.admin-bookform-message {
+    text-align: center;
+    font-weight: 500;
+    padding: 1vw;
+}
+
+.admin-bookform-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.admin-bookform-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

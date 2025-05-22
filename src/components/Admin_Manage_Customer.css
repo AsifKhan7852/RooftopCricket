@@ -1,0 +1,172 @@
+.admin_manage_customers_container {
+    height: 50vw;
+    width: 100vw;
+}
+
+.admin_manage_customers_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vw;
+    margin-top: 1vw;
+}
+
+.admin_manage_customers_header h4 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin: 0;
+}
+
+.admin_manage_customers_search {
+    display: flex;
+    align-items: center;
+    margin: 1.5vw 0 1.5vw 6.5vw;
+    gap: 2vw;
+    width: 55vw;
+}
+
+.admin_manage_customers_input {
+    border: none;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    padding: 0.8vw 1.2vw;
+    font-size: 1.2vw;
+    width: 22vw;
+}
+
+.admin_manage_customers_status {
+    padding: 0.7vw 1.2vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    background-color: rgb(184, 182, 182);
+}
+
+.admin_manage_customers_table_wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.admin_manage_customers_table_container {
+    display: flex;
+    justify-content: center;
+    min-width: max-content;
+    margin-top: -1vw;
+}
+
+.admin_manage_customers_table {
+    min-width: 800px;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #378685;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-in-out;
+}
+
+.admin_manage_customers_table thead {
+    border: 1px solid rgb(123, 232, 247);
+    background-color: #3c8180;
+    color: white;
+    text-align: center;
+}
+
+.admin_manage_customers_table th,
+.admin_manage_customers_table td {
+    border: 1px solid rgb(123, 232, 247);
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.table-row-hover {
+    transition: transform 0.2s ease;
+}
+
+.table-row-hover:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.admin_manage_customers_actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin_manage_customers_button {
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #13797cf6;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.admin_manage_customers_button:hover {
+    transform: scale(1.1);
+    opacity: 0.95;
+}
+
+/* Spinner */
+.admin_manage_customers_spinner_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #13797cf6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scrollbar styling */
+.admin_manage_customers_table_wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.admin_manage_customers_table_wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* Loading and error messages */
+.admin_manage_customers_loading,
+.admin_manage_customers_error,
+.admin_manage_customers_noresults {
+    text-align: center;
+    color: #333;
+    margin-top: 1.5vw;
+    font-size: 1.2vw;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.5s ease-in-out;
+}

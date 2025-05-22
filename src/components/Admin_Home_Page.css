@@ -1,0 +1,80 @@
+.amain {
+    height: 52.5vw;
+}
+
+.abody {
+    height: 75%;
+    display: flex;
+}
+
+.abody_text {
+    height: 100%;
+    width: 50%;
+    display: block;
+    align-content: center;
+    font-size: 6vw;
+    color: #2CDA9D;
+    padding-left: 7vw;
+    font-weight: bold;
+    margin-top: -2vw;
+    margin-left: 3vw;
+    animation: pulseText 2s ease-in-out infinite;
+}
+
+.game-on-text span {
+    display: inline-block;
+}
+
+.aexplore {
+    color: black;
+    margin-top: -5vw;
+    margin-bottom: 1vw;
+}
+
+.abody_img {
+    height: 100%;
+    width: 50%;
+}
+
+.abody_img .animated-img {
+    width: 80%;
+    height: 95%;
+    float: right;
+    margin-top: 1vw;
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+.avisitor_footor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avisitor_footor img {
+    height: 4.5vw;
+    width: 40%;
+}
+
+/* Animations */
+
+@keyframes pulseText {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

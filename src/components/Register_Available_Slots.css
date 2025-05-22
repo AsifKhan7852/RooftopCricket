@@ -1,0 +1,144 @@
+.register_n_book {
+    height: 100vh;
+    width: 99.8%;
+    overflow-y: auto;
+}
+
+.register_avail_head {
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.register_avail_head img {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 5vw;
+    cursor: pointer;
+}
+
+.register_avail_head h4 {
+    margin: 0vw 38vw;
+    font-size: 1.9vw;
+}
+
+.register_avail_body {
+    display: flex;
+    height: 84.5%;
+}
+
+.register_avail_text {
+    height: 100%;
+    width: 60%;
+}
+
+.register_avail_calender {
+    border-radius: 1vw;
+    background-color: #3d7e7e;
+    display: flex;
+    align-items: center;
+    padding: 0.7vw 0vw;
+    margin-top: 3vw;
+    margin-left: 6.5vw;
+    width: 60vw;
+}
+
+.register_avail_calender label {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.register_avail_calender_input {
+    border: none;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    margin-right: 3vw;
+    margin-left: 2vw;
+    font-size: 1.2vw;
+}
+
+.register_avail_search {
+    padding: 0.5vw 1vw;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    z-index: 1000;
+}
+
+.register_avail_search img {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.register_avail_table-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    width: 85vw;
+    margin-left: 6.5vw;
+}
+
+.register_avail_custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+}
+
+.register_avail_custom-table th,
+.register_avail_custom-table td {
+    padding: 15px;
+    border: 1px solid #4e9c9c;
+    text-align: center;
+}
+
+.register_avail_custom-table th {
+    background-color: #408080;
+}
+
+.register_avail_button {
+    background-color: #346464;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.register_avail_button:hover {
+    background-color: #346464;
+}
+
+.register_avail_img {
+    height: 100%;
+    width: 40%;
+    z-index: -100;
+}
+
+.register_avail_img img {
+    width: 100%;
+    height: 100%;
+    margin-top: 7vw;
+    opacity: 10%;
+}
+
+.register_b_btn {
+    align-self: flex-end;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 3vw;
+}
+
+.register_b_btn button {
+    padding: 0.7vw 3vw;
+    border-radius: 1vw;
+    background-color: #346464;
+    color: white;
+    border: none;
+    font-size: 1.2vw;
+    cursor: pointer;
+}

@@ -1,0 +1,196 @@
+.s_mange_rooftop {
+    height: 47.5vw;
+    width: 99.8%;
+}
+
+.s_managerooft_head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    /* margin-top: 2vw; */
+}
+
+.s_managerooft_head h4 {
+    margin: 0vw 35vw;
+    font-size: 1.7vw;
+}
+
+.s_manageroof_body {
+    display: flex;
+    height: auto;
+    padding-bottom: 2vw;
+}
+
+.s_manageroof_text {
+    height: 100%;
+    width: 60%;
+}
+
+.s_manageroof_calender {
+    border-radius: 1vw;
+    background-color: #3d7e7e;
+    display: flex;
+    align-items: center;
+    padding: 0.7vw 0vw;
+    margin-top: 1vw;
+    margin-left: 6.5vw;
+    width: 46.5vw;
+}
+
+.s_manageroof_calender_input {
+    border: none;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    margin-right: 1vw;
+    font-size: 1.2vw;
+    transition: box-shadow 0.3s ease;
+}
+
+.s_manageroof_calender_input:focus {
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(100, 180, 180, 0.7);
+}
+
+.s_manageroof_search {
+    padding: 0.5vw 1vw;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.s_manageroof_search:hover {
+    transform: scale(1.1);
+}
+
+.s_manageroof_search img {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.search_main {
+    display: flex;
+    margin-left: 1vw;
+    border-radius: 0.5vw;
+}
+
+.s_manageroof_active {
+    margin-left: 3vw;
+    padding: 0.6vw 1vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    background-color: rgb(184, 182, 182);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.s_manageroof_active:hover {
+    box-shadow: 0 0 8px 2px rgba(100, 180, 180, 0.7);
+}
+
+.s_manageroof_table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    margin-left: 6.5vw;
+    width: 90vw;
+    max-height: 30vw;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.s_manageroof_custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+}
+
+.s_manageroof_custom-table th,
+.s_manageroof_custom-table td {
+    border: 1px solid #4e9c9c;
+    text-align: center;
+    padding: 0.8vw;
+}
+
+.s_manageroof_custom-table tbody tr {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.s_manageroof_custom-table tbody tr:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.s_manageroof_actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.s_manageroof_button {
+    background-color: #254444;
+    color: white;
+    border: none;
+    padding: 0.5vw 1vw;
+    margin: 0.2vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1vw;
+    min-width: 5vw;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.s_manageroof_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 2px rgba(100, 180, 180, 0.7);
+}
+
+.s_manageroof_deletebtn {
+    background-color: #fca606;
+    color: white;
+    border: none;
+    padding: 0.5vw 1vw;
+    margin: 0.2vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1vw;
+    min-width: 5vw;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.s_manageroof_deletebtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 2px rgba(250, 180, 40, 0.7);
+}
+
+.s_manageroof_img img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    pointer-events: none; /* This line is the fix */
+}
+
+/* Fade-in animation for table rows */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-row {
+    animation: fadeInUp 0.5s ease forwards;
+}

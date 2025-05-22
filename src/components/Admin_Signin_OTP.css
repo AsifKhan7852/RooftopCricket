@@ -1,0 +1,119 @@
+.admin-signin-otp-container {
+  display: flex;
+  height: 105vh;
+}
+
+.admin-signin-otp-left {
+  width: 50%;
+}
+
+.admin-signin-otp-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-signin-otp-right {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 5vw;
+}
+
+.admin-signin-otp-box {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 90%;
+}
+
+.admin-signin-otp-details {
+  text-align: center;
+}
+
+.admin-signin-otp-details h2 {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.admin-signin-otp-details p {
+  color: black;
+  font-size: 14px;
+}
+
+.admin-signin-otp-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.admin-signin-otp-input-group input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.admin-signin-otp-verify-btn {
+  background-color:rgb(5, 196, 154);
+  color: white;
+  padding: 10px 20px;
+  width: 15vw;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Disable background color change on hover */
+.admin-signin-otp-verify-btn:hover {
+   background-color:rgb(48, 250, 206);
+  color: white;
+}
+
+.admin-signin-otp-resend-btn {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  width: 15vw;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Disable background color change on hover */
+.admin-signin-otp-resend-btn:hover {
+  background-color: rgb(253, 192, 77);
+  color: white;
+}
+
+.admin-signin-otp-hand-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.admin-signin-otp-hand-wrapper img {
+  width: 18vw;
+  height: auto;
+  margin-left: 3vw;
+}
+
+.admin-signin-otp-error {
+  color: red;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}
+
+.admin-signin-otp-success {
+  color: green;
+  font-size: 1vw;
+  margin-top: 1vw;
+  text-align: center;
+}

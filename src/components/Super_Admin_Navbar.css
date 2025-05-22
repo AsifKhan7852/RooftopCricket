@@ -1,0 +1,57 @@
+/* Wrapper to replace image with background color */
+.super_admin_navbar_wrapper {
+     background-color: #2CDA9D; /* Adjust this color to match the old background image */
+    width: 100%;
+    /* margin-top: 2.7vw; */
+    animation: slideInFromTop 0.5s ease-out;
+    border-radius: 0.5vw;
+}
+
+.super_admin_navbar_container {
+    display: flex;
+    height: 4vw;
+}
+
+.super_admin_navbar_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 83vw;
+    z-index: 1000;
+    margin-left: 12vw;
+    margin-right: -3vw;
+}
+
+.super_admin_navbar_links a {
+    z-index: 1000;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3vw;
+    transition: color 0.3s ease;
+}
+
+.super_admin_navbar_links a:hover {
+    color: white;
+}
+
+/* Removed image reference */
+/*
+.super_admin_navbar_image {
+    height: 100%;
+    width: 83vw;
+    margin-right: 9vw;
+    margin-left: -75vw;
+}
+*/
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

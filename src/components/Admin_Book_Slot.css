@@ -1,0 +1,153 @@
+.admin_slot_container {
+    height: 47.5vw;
+    width: 99.8%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.admin_slot_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+}
+
+.admin_slot_header h4 {
+    margin: 0vw 38vw;
+    font-size: 1.7vw;
+}
+
+.admin_slot_body {
+    display: flex;
+    height: 84.5%;
+}
+
+.admin_slot_left {
+    height: 100%;
+    width: 100%;
+}
+
+.admin_slot_filter {
+    border-radius: 1vw;
+    background-color: #3d7e7e;
+    display: flex;
+    align-items: center;
+    padding: 0.7vw 0vw;
+    margin-left: 6.5vw;
+    width: 60vw;
+}
+
+.admin_slot_filter label {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.admin_slot_input {
+    border: none;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    margin-right: 3vw;
+    margin-left: 2vw;
+    font-size: 1.2vw;
+}
+
+.admin_slot_search {
+    padding: 0.5vw 1vw;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+}
+
+.admin_slot_search img {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.admin_slot_table_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1vw;
+    margin-left: 6.5vw;
+    width: 73vw;
+    position: relative;
+}
+
+.admin_slot_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+}
+
+.admin_slot_table th,
+.admin_slot_table td {
+    padding: 15px;
+    border: 1px solid #4e9c9c;
+    text-align: center;
+}
+
+.admin_slot_table th {
+    background-color: #408080;
+}
+
+.admin_slot_button {
+    background-color: #346464;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin_slot_button:hover {
+    background-color: #346464;
+}
+
+.admin_slot_proceed_wrapper {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 0vw 1.5vw;
+    border-radius: 1vw;
+    background-color: #346464;
+    align-self: flex-end;
+}
+
+.admin_slot_proceed_btn {
+    background-color: #346464;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+
+.admin_slot_proceed_btn:hover {
+    background-color: #346464;
+}
+
+/* Added message styling */
+.admin_slot_message {
+    text-align: center;
+    font-weight: 500;
+    padding: 0.5vw;
+}
+
+.admin_slot_message.success {
+    color: #155724;
+    background-color: #408080;
+    border: 1px solid #c3e6cb;
+}
+
+.admin_slot_message.error {
+    color: #721c24;
+    background-color: #408080;
+    border: 1px solid #f5c6cb;
+}

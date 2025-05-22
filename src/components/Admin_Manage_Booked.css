@@ -1,0 +1,224 @@
+/* Admin_Manage_Booked.css */
+.manage-booked-container {
+    height: 47.5vw;
+    width: 99.8%;
+    overflow: auto;
+}
+
+.booked-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+}
+
+.booked-header h4 {
+    margin: 0vw 35vw;
+    font-size: 1.7vw;
+}
+
+.booked-body {
+    display: flex;
+    height: 84.5%;
+}
+
+.booked-filters {
+    height: 100%;
+    width: 60%;
+}
+
+.booked-calendar {
+    border-radius: 1vw;
+    background-color: #3d7e7e;
+    display: flex;
+    align-items: center;
+    padding: 0.7vw 0vw;
+    margin-left: 6.5vw;
+    width: 60vw;
+}
+
+.booked-calendar label {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.booked-calendar-input {
+    border: none;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    margin-right: 3vw;
+    margin-left: 2vw;
+    font-size: 1.2vw;
+}
+
+.booked-search {
+    padding: 0.5vw 1vw;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.5vw;
+    z-index: 1000;
+}
+
+.booked-search img {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.booked-table-container {
+    display: block;
+    overflow-x: auto;
+    margin-top: 1vw;
+    margin-left: 6.5vw;
+    width: 90vw;
+    max-height: 30vw;
+}
+
+.booked-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+    margin-bottom: 1.5vw;
+}
+
+.booked-custom-table th,
+.booked-custom-table td {
+    border: 1px solid #4e9c9c;
+    text-align: center;
+    padding: 15px;
+}
+
+.booked-custom-table td:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.booked-button {
+    background-color: #346464;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.booked-button:hover {
+    background-color: #346464;
+}
+
+.booked-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Receipt Popup Styles */
+.receipt-content {
+    background: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    width: 20vw;
+    max-width: 50vw;
+}
+
+.receipt-content h3 {
+    text-align: center;
+    color: #346464;
+    margin-bottom: 1.5vw;
+    font-size: 1.8vw;
+}
+
+.receipt-details p {
+    margin: 0.8vw 0;
+    font-size: 1.1vw;
+    color: #333;
+}
+
+.amount-section {
+    margin-top: 1.5vw;
+    padding-top: 1vw;
+    border-top: 1px solid #ccc;
+}
+
+.total-amount {
+    font-size: 1.3vw !important;
+    color: #346464 !important;
+    font-weight: bold;
+    margin-top: 1vw !important;
+}
+
+.receipt-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.print-button, .close-button {
+    padding: 0.8vw 1.5vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 1.1vw;
+}
+
+.print-button {
+    background-color: #346464;
+    color: white;
+}
+
+.close-button {
+    background-color: #cccccc;
+    color: #333;
+}
+
+.print-button:hover {
+    background-color: #2a5252;
+}
+
+.close-button:hover {
+    background-color: #b3b3b3;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .receipt-content, .receipt-content * {
+        visibility: visible;
+    }
+    .receipt-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+    }
+    .receipt-buttons {
+        display: none;
+    }
+}

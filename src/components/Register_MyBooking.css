@@ -1,0 +1,159 @@
+.mybooking {
+    height: 50vw;
+    width: 100vw;
+    overflow-y: auto; /* Single scroll on whole component */
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.mybooking::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+.mybooking::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.head h4 {
+    margin: 0vw 35vw;
+    font-size: 1.7vw;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -1vw;
+    /* Removed overflow to allow whole container to scroll */
+    margin-bottom: 3vw;
+}
+
+.custom-table {
+    border: 2px solid rgb(0, 4, 255);
+    width: 95%;
+    border-collapse: collapse;
+    background-color: #378685;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background-color: #3c8180;
+    color: white;
+    text-align: left;
+}
+
+.custom-table th {
+    border: 1px solid rgb(123, 232, 247);
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.custom-table tbody tr {
+    border: 1px solid rgb(123, 232, 247);
+    transition: background-color 0.3s ease;
+}
+
+.custom-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-table td {
+    border: 1px solid rgb(123, 232, 247);
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.cancel-btn {
+    background-color: #f80303f6;
+}
+
+.update-btn {
+    background-color: #0327f1;
+}
+
+.reschedule-btn {
+    background-color: #03f869;
+    width: 8vw;
+}
+
+.action-buttons button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.cancel-btn:disabled,
+.update-btn:disabled,
+.reschedule-btn:disabled {
+    color: #ccc !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: blur(1.5px);
+}
+
+.cancel-btn:disabled {
+    background-color: #f80303 !important;
+}
+
+.update-btn:disabled {
+    background-color: #0327f1 !important;
+}
+
+.reschedule-btn:disabled {
+    background-color: #888 !important;
+}
+
+.popup-overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2vw;
+    border-radius: 15px;
+    max-height: 90vh;
+    max-width: 80vw;
+    overflow-y: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    width: 25vw;
+}

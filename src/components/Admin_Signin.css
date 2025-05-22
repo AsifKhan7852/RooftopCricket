@@ -1,0 +1,229 @@
+.admin-signin-container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.admin-signin-image {
+    height: 99%;
+    width: 50%;
+    animation: floatImage 2s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.admin-signin-image img {
+    width: 97%;
+    height: 99%;
+}
+
+.admin-signin-form-container {
+    height: 93%;
+    width: 50%;
+    padding-top: 3vw;
+    animation: fadeSlideIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-signin-form-container h2 {
+    font-size: 3vw;
+    transition: color 0.3s ease;
+}
+
+.admin-signin-form-container h2:hover {
+    color: rgb(5, 196, 154);
+}
+
+.admin-signin-form-container p {
+    font-size: 1.5vw;
+    margin-top: -2vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.admin-signin-form-container p:hover {
+    color: rgb(4, 170, 135);
+}
+
+.admin-signin-form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.admin-forget-password {
+    float: right;
+    margin-right: 18.3vw;
+    color: rgb(5, 196, 154);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.admin-forget-password:hover {
+    color: rgb(4, 170, 135);
+}
+
+.admin-signin-form input {
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid rgb(83, 83, 83);
+    transition: border 0.3s ease;
+}
+
+.admin-signin-form input:focus {
+    border: 1px solid rgb(5, 196, 154);
+    outline: none;
+}
+
+.admin-login-button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 14vw;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 1vw;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admin-login-button:hover:not(:disabled) {
+    background: rgb(4, 170, 135);
+    transform: scale(1.03);
+}
+
+.admin-or-divider {
+    display: flex;
+    align-items: center;
+    width: 31vw;
+    margin: 1vw 0 0 0vw;
+}
+
+.admin-or-divider hr {
+    border: none;
+    border-top: 1px solid rgb(83, 83, 83);
+    flex: 1;
+}
+
+.admin-or-divider h4 {
+    margin: 0 0.5vw;
+    font-size: 1.2vw;
+    color: rgb(28, 27, 27);
+    transition: color 0.3s ease;
+}
+
+.admin-or-divider h4:hover {
+    color: rgb(5, 196, 154);
+}
+
+.admin-signup-link {
+    display: flex;
+    align-items: center;
+    margin: 0.5vw 0 0 4.5vw;
+    width: fit-content;
+}
+
+.admin-signup-link p {
+    margin: 0;
+    font-size: 1.3vw;
+}
+
+.admin-signup-link a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-left: 0.5vw;
+    color: rgb(5, 196, 154);
+    transition: color 0.3s ease;
+}
+
+.admin-signup-link a:hover {
+    color: rgb(4, 170, 135);
+}
+
+.error-message-container {
+    width: 100%;
+    margin-top: 3vw;
+}
+
+.admin-error-message-new {
+    color: #d8000c;
+    background-color: #ffdddd;
+    border: 1px solid #d8000c;
+    padding: 0.8vw;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    width: 59%;
+    text-align: left;
+    box-shadow: 0 0 5px rgba(216, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Password toggle styles */
+.password-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.password-toggle-icon:hover {
+    color: rgb(5, 196, 154);
+}
+
+/* Spinner loader */
+.dual-ring {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.dual-ring:after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: dual-ring-spin 1.2s linear infinite;
+}
+
+@keyframes dual-ring-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,76 @@
+.signup_role {
+    height: 55vw;
+}
+
+.signup_select {
+    margin-top: 10vw;
+}
+
+.signup_heading h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7vw;
+    color: rgb(32, 30, 30);
+}
+
+.signup_role_selection {
+    width: 25vw;
+    height: auto;
+    margin-left: 33.5vw;
+    margin-top: 0vw;
+}
+
+.signup_role_selection img {
+    display: block;
+    width: 15vw;
+    height: 4vw;
+    margin: 0vw 8vw;
+}
+
+.signup_role_selection a,
+.signup_role_selection Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 4vw;
+    margin-top: -4vw;
+    margin-left: 8vw;
+    margin-bottom: 1vw;
+    font-size: 1.7vw;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+
+    /* Smooth transition for hover */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on buttons */
+.signup_role_selection a:hover,
+.signup_role_selection Link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white; /* Gold highlight on hover */
+    transform: scale(1.05);
+    border-radius: 5px;
+}
+
+.signup_rolepic img {
+    float: right;
+    margin-top: -20vw;
+    width: 38vw;
+    height: 41vw;
+
+    /* Float up and down animation */
+    animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

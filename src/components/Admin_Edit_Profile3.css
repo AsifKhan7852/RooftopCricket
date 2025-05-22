@@ -1,0 +1,116 @@
+.editprofile3-container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.editprofile3-text-section img {
+    width: 1.5vw;
+    height: 1.5vw;
+    float: left;
+    margin-left: -5vw;
+    padding-top: 1vw;
+    cursor: pointer;
+}
+
+.editprofile3-image-section {
+    height: 99%;
+    width: 55%;
+}
+
+.editprofile3-image-section img {
+    width: 100%;
+    height: 99%;
+}
+
+.editprofile3-text-section {
+    height: 99%;
+    width: 45%;
+    padding-left: 12vw;
+}
+
+.editprofile3-text-section h2 {
+    font-size: 2vw;
+    padding-top: 2vw;
+}
+
+.editprofile3-form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.editprofile3-form input {
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid rgb(83, 83, 83);
+}
+
+.editprofile3-form button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 15.5vw;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+    text-decoration: none;
+    width: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editprofile3-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Dual ring spinner */
+.dual-ring {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.editprofile3-divider {
+    display: flex;
+    width: fit-content;
+    height: 1px;
+}
+
+.editprofile3-divider hr {
+    width: 15vw;
+    margin-top: 2.5vw;
+}
+
+.editprofile3-signin-redirect {
+    display: flex;
+    height: 2vw;
+    width: fit-content;
+    margin-left: 8vw;
+    margin-top: 5vw;
+}
+
+.editprofile3-signin-redirect p {
+    margin-top: 0vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.editprofile3-signin-redirect a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-left: 0.5vw;
+}

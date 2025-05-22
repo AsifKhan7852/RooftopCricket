@@ -1,0 +1,205 @@
+.signup3-container {
+  height: 47.4vw;
+  display: flex;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.signup3-text-section {
+  height: 99%;
+  width: 45%;
+  padding-left: 12vw;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.signup3-text-section img {
+  width: 1.5vw;
+  height: 1.5vw;
+  float: left;
+  margin-left: -5vw;
+  padding-top: 1vw;
+}
+
+.signup3-text-section h2 {
+  font-size: 2vw;
+  padding-top: 2vw;
+}
+
+.signup3-form label {
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+.signup3-form input {
+  padding: 1vh;
+  border-radius: 1vh;
+  border: 1px solid rgb(83, 83, 83);
+  width: 30vw;
+  transition: all 0.3s ease;
+}
+
+.signup3-form input:hover,
+.signup3-form input:focus {
+  border-color: rgb(5, 196, 154);
+  box-shadow: 0 0 5px rgba(5, 196, 154, 0.5);
+  outline: none;
+}
+
+/* New styles for the time inputs row */
+.time-row {
+  display: flex;
+  gap: 1vw;
+  margin-top: 0.5vw;
+}
+
+.time-row input {
+  width: 14vw !important;
+  padding: 0.8vh 1vh;
+}
+
+.signup3-form button {
+  background: rgb(5, 196, 154);
+  border: 2px solid rgb(5, 196, 154);
+  padding: 0.7vw 15.5vw;
+  border-radius: 1vw;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1vw;
+  margin-top: 1vw;
+  cursor: pointer;
+  text-decoration: none;
+  width: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.signup3-form button:hover {
+  background: #04b89e;
+  transform: translateY(-2px);
+}
+
+.signup3-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.signup3-divider {
+  display: flex;
+  width: fit-content;
+  height: 1px;
+}
+
+.signup3-divider hr {
+  width: 15vw;
+  margin-top: 2.5vw;
+}
+
+.signup3-signin-redirect {
+  display: flex;
+  height: 2vw;
+  width: fit-content;
+  margin-left: 8vw;
+  margin-top: 5vw;
+}
+
+.signup3-signin-redirect p {
+  margin-top: 0vw;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+
+.signup3-signin-redirect a {
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-left: 0.5vw;
+  color: rgb(5, 196, 154);
+}
+
+.signup3-message {
+  font-size: 1vw;
+  font-weight: 500;
+  margin-top: 1vw;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  width: 30vw;
+}
+
+.signup3-message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.signup3-message.error {
+  color: red;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Dual spinner ring loader */
+.dual-spinner-ring {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.dual-spinner-ring .ring1,
+.dual-spinner-ring .ring2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.dual-spinner-ring .ring2 {
+  border: 3px solid transparent;
+  border-bottom-color: white;
+  animation-direction: reverse;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.signup3-image-section {
+  height: 99%;
+  width: 55%;
+}
+
+.signup3-image-section img {
+  width: 100%;
+  height: 99%;
+  animation: floatImage 2s ease-in-out infinite;
+}

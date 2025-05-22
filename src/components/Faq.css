@@ -1,0 +1,103 @@
+.user_faq {
+    width: 99.7%;
+    height: 47.4vw;
+}
+
+.user_faq img {
+    width: 2.5vw;
+    height: 2vw;
+    margin-top: 2vw;
+    margin-left: 6vw;
+}
+
+.user_faq_p {
+    margin-top: 3vw;
+    margin-left: 32vw;
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.fbody {
+    width: 99.7%;
+    height: 81%;
+    margin-top: -1.5vw;
+    display: flex;
+    opacity: 1;
+}
+
+.ftext {
+    width: 55%;
+    height: 99%;
+}
+
+.ftext p {
+    margin-left: 7vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.ftext img {
+    margin-left: 50vw;
+    margin-bottom: 3vw;
+    margin-top: -3.4vw;
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+.fhr {
+    width: 45vw;
+    margin-left: 7vw;
+    margin-top: -3.3vw;
+}
+
+.fimage {
+    width: 45%;
+    height: 99%;
+}
+
+.fimage img {
+    margin-top: 3vw;
+    margin-left: 2vw;
+    width: 99%;
+    height: 90%;
+}
+
+/* Spinner container centered */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust height as needed */
+}
+
+/* Spinner styles */
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fade-in animation for FAQ content */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

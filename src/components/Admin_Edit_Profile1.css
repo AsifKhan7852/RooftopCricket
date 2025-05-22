@@ -1,0 +1,58 @@
+.admin_editprofile1_container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.admin_editprofile1_text_section img {
+    width: 1.5vw;
+    height: 1.5vw;
+    float: left;
+    margin-left: -5vw;
+    padding-top: 1vw;
+}
+
+.admin_editprofile1_image_section {
+    height: 99%;
+    width: 55%;
+}
+
+.admin_editprofile1_image_section img {
+    width: 100%;
+    height: 99%;
+}
+
+.admin_editprofile1_text_section {
+    height: 99%;
+    width: 45%;
+    padding-left: 12vw;
+}
+
+.admin_editprofile1_text_section h2 {
+    font-size: 2vw;
+    padding-top: 2vw;
+}
+
+.admin_editprofile1_form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.admin_editprofile1_form input {
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid rgb(83, 83, 83);
+}
+
+.admin_editprofile1_form button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 15.5vw;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+    text-decoration: none;
+    width: 1vw;
+}

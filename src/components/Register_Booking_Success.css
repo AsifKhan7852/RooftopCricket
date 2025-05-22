@@ -1,0 +1,162 @@
+/* Base Container */
+.rbs-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f9fafb;
+}
+
+/* Card Styles */
+.rbs-card {
+    width: 100%;
+    max-width: 28rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Processing State */
+.rbs-processing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rbs-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 4px solid #e0e7ff;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: rbs-spin 1s linear infinite;
+}
+
+/* Success State */
+.rbs-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rbs-success-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #d1fae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Error State */
+.rbs-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rbs-error-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #fee2e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon Styles */
+.rbs-icon {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.rbs-success-icon .rbs-icon {
+    stroke: #10b981;
+}
+
+.rbs-error-icon .rbs-icon {
+    stroke: #ef4444;
+}
+
+/* Progress Bar */
+.rbs-redirect {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.rbs-progress-bar {
+    width: 100%;
+    height: 0.375rem;
+    background-color: #e5e7eb;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.rbs-progress-fill {
+    height: 100%;
+    background-color: #10b981;
+    animation: rbs-progress 3s linear forwards;
+    transform-origin: left;
+}
+
+/* Button */
+.rbs-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rbs-button:hover {
+    background-color: #2563eb;
+}
+
+/* Typography */
+.rbs-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.rbs-text {
+    color: #4b5563;
+    margin: 0;
+}
+
+.rbs-redirect-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes rbs-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rbs-progress {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

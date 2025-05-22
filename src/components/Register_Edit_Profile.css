@@ -1,0 +1,132 @@
+.useredit_container {
+    height: 47.4vw;
+    display: flex;
+}
+
+.useredit_image_section {
+    height: 99%;
+    width: 55%;
+}
+
+.useredit_image_section img {
+    width: 97%;
+    height: 99%;
+}
+
+.useredit_form_section {
+    height: 99%;
+    width: 45%;
+    padding-left: 12vw;
+}
+
+.useredit_form_section h2 {
+    font-size: 2vw;
+    padding-top: 2vw;
+}
+
+.useredit_form {
+    height: auto;
+}
+
+.useredit_form label {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.useredit_form input {
+    border: 1px solid rgb(83, 83, 83);
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+.useredit_form button {
+    background: rgb(5, 196, 154);
+    border: 2px solid rgb(5, 196, 154);
+    padding: 0.7vw 15.5vw;
+    width: 1vw;
+    border-radius: 1vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Message Styling */
+.useredit_message-box {
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 1vw;
+    margin-top: -2vw;
+    margin-bottom: 2vw;
+    border-radius: 0.5vw;
+    width: 80%;
+    text-align: center;
+}
+
+.useredit_message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.useredit_message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Password toggle styles */
+.password-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.password-input {
+    padding-right: 40px; /* Space for icon */
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9vw;
+    margin-top: 0.5vw;
+}
+
+/* Dual Ring Spinner */
+.dual-ring-loader {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.dual-ring-loader:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 4px solid white;
+    border-color: white transparent white transparent;
+    animation: dual-ring 1.2s linear infinite;
+}
+
+@keyframes dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

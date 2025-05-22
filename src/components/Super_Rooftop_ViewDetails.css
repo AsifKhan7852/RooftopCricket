@@ -1,0 +1,165 @@
+.s_mange_viewdetail {
+    height: 100vh;
+    width: 99.8%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.s_manage_viewdetail_head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.s_manage_viewdetail_head h4 {
+    margin: 0vw 5.3vw;
+    font-size: 1.7vw;
+}
+
+.s_manage_viewdetail_body {
+    height: auto;
+    display: flex;
+}
+
+.s_viewdetails_main {
+    width: 60%;
+    height: 100%;
+}
+
+.personal_detail,
+.rooftop_detail {
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.slide-up {
+    opacity: 1;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.personal_detail {
+    border-radius: 1vw;
+    background-color: rgb(44, 243, 183);
+    height: 13vw;
+    width: 80%;
+    float: right;
+}
+
+.rooftop_detail_head {
+    margin-top: 15vw;
+    margin-left: 11.5vw;
+    width: 50%;
+}
+
+.rooftop_detail {
+    border-radius: 1vw;
+    background-color: rgb(44, 243, 183);
+    height: auto;
+    width: 80%;
+    float: right;
+    margin-bottom: 10vw;
+}
+
+.detail1,
+.detail2,
+.detail3,
+.detail4,
+.detail5,
+.detail6,
+.detail7,
+.detail8,
+.detail9,
+.detail10 {
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    height: 2vw;
+    margin-top: 1vw;
+}
+
+.detail1 h5,
+.detail2 h5,
+.detail3 h5,
+.detail4 h5,
+.detail5 h5,
+.detail6 h5,
+.detail7 h5,
+.detail8 h5,
+.detail9 h5,
+.detail10 h5 {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-right: 3vw;
+    width: 15vw;
+}
+
+.detail1 p,
+.detail2 p,
+.detail3 p,
+.detail4 p,
+.detail5 p,
+.detail6 p,
+.detail7 p,
+.detail8 p,
+.detail9 p,
+.detail10 p {
+    width: 30vw;
+    font-size: 1.2vw;
+    margin-left: 6vw;
+}
+
+.view_detail_img1 {
+    display: flex;
+    height: 15vw;
+    padding-bottom: 5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    gap: 1vw;
+}
+
+.view_detail_img1 img {
+    width: 50%;
+    height: 15vw;
+    border-radius: 1vw;
+    transition: transform 0.4s ease;
+}
+
+.view_detail_img1 img:hover {
+    transform: scale(1.05);
+}
+
+.view_detail_img h5 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2vw;
+    font-weight: 500;
+    width: 13vw;
+}
+
+.s_manage_viewdetails_img {
+    width: 40%;
+    height: 100%;
+}
+
+.s_manage_viewdetails_img img {
+    width: 100%;
+    height: 100%;
+}

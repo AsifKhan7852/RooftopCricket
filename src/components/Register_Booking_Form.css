@@ -1,0 +1,117 @@
+.register_bookform {
+    height: 47.5vw;
+    width: 99.8%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+}
+
+.register_bookform_head {
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    margin-top: 2vw;
+}
+
+.register_bookform_head h4 {
+    margin: 0vw 38vw;
+    font-size: 1.9vw;
+}
+
+.selected_slot_heading {
+    margin-left: 6.5vw;
+    font-size: 1.3vw;
+}
+
+.register_bookform_body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+.register_bookform_text {
+    width: 100%;
+}
+
+/* Table Scroll Area */
+.register_bookform_table-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    width: 85vw;
+    margin-left: 6.5vw;
+    max-height: 28vw;
+    overflow-y: auto;        /* Enable vertical scroll */
+    overflow-x: hidden;      /* Disable horizontal scroll */
+    scrollbar-width: thin;
+}
+
+/* Scrollbar Styling */
+.register_bookform_table-container::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+.register_bookform_table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.register_bookform_custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #3d7e7e;
+    color: white;
+}
+
+.register_bookform_custom-table th,
+.register_bookform_custom-table td {
+    padding: 0.5vw 2vw;
+    border: 1px solid #4e9c9c;
+    text-align: center;
+}
+
+.register_bookform_custom-table th {
+    background-color: #408080;
+}
+
+.register_bookform_button {
+    background-color: #346464;
+    color: white;
+    border: none;
+    margin: 0vw 0.5vw;
+    padding: 1vw 3vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.register_bookform_button:hover {
+    background-color: #285454;
+}
+
+/* Book Now Button aligned bottom-right OUTSIDE scrollable table */
+.register_bookform_btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 85vw;
+    margin-left: 6.5vw;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+.register_bookform_btn button {
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    border-radius: 0.6vw;
+    background-color: #346464;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 10vw;
+}

@@ -1,0 +1,467 @@
+.register_book_rooftop_scroll {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.register_book_rooftop {
+    height: auto;
+    width: 99.8%;
+    margin-bottom: 5vw;
+    animation: fadeIn 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register_book_rooftop_head {
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    margin-top: 2vw;
+    animation: slideDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.register_book_rooftop_head h4 {
+    margin-left: 40vw;
+    font-size: 1.7vw;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.register_book_rooftop_head h4:hover {
+    color: #3E8989;
+    transform: translateY(-2px);
+}
+
+.register_book_rooftop_head h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3E8989;
+    transition: width 0.4s ease;
+}
+
+.register_book_rooftop_head h4:hover::after {
+    width: 100%;
+}
+
+.register_book_search_main {
+    background-color: rgb(184, 182, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11.5vw;
+    border-radius: 0.7vw;
+    padding-right: 1vw;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.register_book_search_main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s ease;
+}
+
+.register_book_search_main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.register_book_search_main:hover::before {
+    left: 100%;
+}
+
+.register_book_input {
+    padding: 0.4vw 1vw;
+    background-color: rgb(184, 182, 182);
+    border-radius: 0.7vw;
+    width: 20vw;
+    height: 2vw;
+    border: none;
+    transition: all 0.4s ease;
+    outline: none;
+    font-size: 1.1vw;
+}
+
+.register_book_input:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px #3E8989;
+    transform: scale(1.02);
+}
+
+.register_book_search_img {
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    padding: 0.3vw;
+    border-radius: 50%;
+}
+
+.register_book_search_img:hover {
+    transform: rotate(15deg) scale(1.2);
+    background-color: rgba(62, 137, 137, 0.2);
+}
+
+.register_book_search_img img {
+    width: 1.7vw;
+    height: 1.7vw;
+    margin-left: 1vw;
+    transition: all 0.3s ease;
+}
+
+.register_book_user {
+    float: right;
+    margin-right: 7.5vw;
+    margin-top: 3vw;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.register_book_user_drop {
+    margin-left: 3vw;
+    padding: 0.6vw 1vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    background-color: rgb(184, 182, 182);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    appearance: none;
+    position: relative;
+    padding-right: 2vw;
+}
+
+.register_book_user_drop:hover {
+    background-color: #3E8989;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.register_book_user_drop::after {
+    content: '▼';
+    position: absolute;
+    right: 0.8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.register_book_user_drop:hover::after {
+    color: white;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.register_book_user_drop option {
+    padding: 5vw;
+    gap: 3vw;
+    background-color: white;
+    color: #333;
+}
+
+.register_book_rooftop_body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vw;
+    padding: 0vw 5vw;
+    gap: 2vw;
+    animation: fadeIn 1s ease-out;
+}
+
+.slot_card {
+    background-color: #3E8989;
+    border-radius: 1vw;
+    padding: 2vw 1vw;
+    width: 31.33%;
+    height: auto;
+    box-sizing: border-box;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.slot_card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 1vw;
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.slot_card:hover .card-border {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(0.98);
+}
+
+.slot_card_image_container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2vw;
+    height: 15vw;
+    transform-style: preserve-3d;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slot_card:hover .image-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+}
+
+.slot_card_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center center;
+}
+
+.slot_card:hover .slot_card_image {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.slot_card_data {
+    display: flex;
+    align-items: center;
+    height: 2vw;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.slot_card:hover .slot_card_data {
+    transform: translateX(8px);
+}
+
+.slot_card_data h5 {
+    width: 10vw;
+    font-size: 1.2vw;
+    color: white;
+    transition: all 0.4s ease;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.slot_card:hover .slot_card_data h5 {
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(255,255,255,0.3);
+}
+
+.slot_card_data p {
+    margin-left: 3.5vw;
+    font-size: 1.2vw;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vw;
+    transition: all 0.4s ease;
+}
+
+.slot_card:hover .slot_card_data p {
+    color: #fff;
+    transform: translateX(8px);
+}
+
+.explore_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 0.5vw;
+}
+
+.explore_btn button {
+    border: 1px solid rgba(20, 79, 72, 0.996);
+    padding: 0.8vw 3vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    background-color: #2a6565;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.explore_btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.8s ease;
+}
+
+.explore_btn button:hover {
+    background-color: #3E8989;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-color: rgba(55, 226, 226, 0.8);
+}
+
+.explore_btn button:hover::before {
+    left: 100%;
+}
+
+.button-text {
+    transition: all 0.4s ease;
+}
+
+.button-icon {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.explore_btn button:hover .button-text {
+    transform: translateX(-5px);
+}
+
+.explore_btn button:hover .button-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.error_message {
+    color: red;
+    text-align: center;
+    margin-top: 2vw;
+    animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.loading-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.spinner-sector {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    mix-blend-mode: overlay;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+
+.spinner-sector-top {
+    border-top-color: #3E8989;
+    animation-delay: 0.1s;
+}
+
+.spinner-sector-left {
+    border-left-color: #2a6565;
+    animation-delay: 0.2s;
+}
+
+.spinner-sector-right {
+    border-right-color: #4cadad;
+    animation-delay: 0.3s;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-results {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.5vw;
+    color: #3E8989;
+    animation: fadeInUp 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.no-results-icon {
+    width: 60px;
+    height: 60px;
+    fill: #3E8989;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+

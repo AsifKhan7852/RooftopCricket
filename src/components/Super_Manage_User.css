@@ -1,0 +1,211 @@
+/* Super_Manage_User.css */
+.super-manage-user {
+  height: 47.5vw;
+  width: 99.8%;
+}
+
+.s_manageuser_head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  /* margin-top: 2vw; */
+}
+
+.s_manageuser_head h4 {
+  margin: 0vw 35vw;
+  font-size: 1.7vw;
+}
+
+.s_manageuser_body {
+  display: flex;
+  height: 84.5%;
+}
+
+.s_manageuser_text {
+  height: 100%;
+  width: 60%;
+}
+
+.s_manageuser_calender {
+  border-radius: 1vw;
+  background-color: #3d7e7e;
+  display: flex;
+  align-items: center;
+  padding: 0.7vw 0vw;
+  margin-top: 1vw;
+  margin-left: 6.5vw;
+  width: 46.5vw;
+}
+
+.s_manageuser_calender_input {
+  border: none;
+  background-color: rgb(184, 182, 182);
+  border-radius: 0.5vw;
+  padding: 0.7vw 1vw;
+  margin-right: 1vw;
+  font-size: 1.2vw;
+}
+
+.s_manageuser_search {
+  padding: 0.5vw 1vw;
+  background-color: rgb(184, 182, 182);
+  border-radius: 0.5vw;
+}
+
+.s_manageuser_search img {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.s_user_search_main {
+  display: flex;
+  margin-left: 1vw;
+  border-radius: 0.5vw;
+}
+
+.s_manageuser_active {
+  margin-left: 3vw;
+  padding: 0.6vw 1vw;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  background-color: rgb(184, 182, 182);
+}
+
+.s_manageuser_table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  margin-left: 6.5vw;
+  width: 90vw;
+  max-height: 30vw;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.s_manageuser_custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #3d7e7e;
+  color: white;
+}
+
+.s_manageuser_custom-table th,
+.s_manageuser_custom-table td {
+  border: 1px solid #4e9c9c;
+  text-align: center;
+  padding: 0.8vw;
+}
+
+.s_manageuser_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.s_manageuser_button {
+  background-color: #254444;
+  color: white;
+  border: none;
+  padding: 0.5vw 1vw;
+  margin: 0.2vw;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1vw;
+  min-width: 5vw;
+}
+
+.s_manageuser_button:hover {
+  background-color: #1a3333;
+}
+
+.s_manageuser_deletebtn {
+  background-color: #fca606;
+  color: white;
+  border: none;
+  padding: 0.5vw 1vw;
+  margin: 0.2vw;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1vw;
+  min-width: 5vw;
+}
+
+.s_manageuser_deletebtn:hover {
+  background-color: #e69505;
+}
+
+.s_manageuser_img img {
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+}
+
+.loading-message,
+.error-message,
+.no-users-message {
+  text-align: center;
+  margin-top: 1vw;
+  font-size: 1.2vw;
+  color: white;
+}
+
+.no-users-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ... keep existing CSS ... */
+
+/* Spinner styles */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+.spinner {
+  border: 0.4vw solid #f3f3f3;
+  border-top: 0.4vw solid #3d7e7e;
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn ease 0.6s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Button hover tweaks (optional enhancements) */
+.s_manageuser_button:hover {
+  background-color: #1a3333;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.s_manageuser_deletebtn:hover {
+  background-color: #e69505;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}

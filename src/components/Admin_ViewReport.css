@@ -1,0 +1,211 @@
+/* Base Styles */
+.adminvr-container {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Header Styles */
+.adminvr-header {
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.adminvr-title {
+    color: rgb(14, 13, 13);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+/* Controls Container */
+.adminvr-controls {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.adminvr-filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Dropdown Styles */
+.adminvr-dropdown {
+    position: relative;
+    min-width: 160px;
+}
+
+.adminvr-dropdown-toggle {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.adminvr-dropdown-toggle:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.adminvr-dropdown-arrow {
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+.adminvr-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.adminvr-dropdown-item {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #475569;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.adminvr-dropdown-item:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Date Picker Styles */
+.adminvr-date-picker {
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    min-width: 400px; /* Added min-width */
+}
+
+.adminvr-date-input,
+.adminvr-month-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1e293b;
+    transition: all 0.2s ease;
+    width: 100%; /* Added full width */
+    min-width: 200px; /* Minimum width for inputs */
+}
+
+.adminvr-date-input:focus,
+.adminvr-month-input:focus {
+    outline: none;
+    border-color: #3E8989;
+    box-shadow: 0 0 0 3px rgba(62, 137, 137, 0.1);
+}
+
+.adminvr-search-btn {
+    padding: 0.75rem 1.5rem;
+    background: #3E8989;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+     /* min-width: 180px; */
+    width: 5vw;
+}
+
+.adminvr-search-btn:hover {
+    background: #2d6a6a;
+    transform: translateY(-1px);
+}
+
+.adminvr-search-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: brightness(0) invert(1);
+}
+
+/* Metrics Styles */
+.adminvr-metrics {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.adminvr-metric-card {
+border: 1px solid rgb(194, 247, 248);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.adminvr-metric-card:hover {
+    transform: translateY(-3px);
+}
+
+.adminvr-metric-label {
+    display: block;
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.adminvr-metric-value {
+    display: block;
+    color: #1e293b;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adminvr-filter-group {
+        flex-direction: column;
+    }
+    
+    .adminvr-date-picker {
+        flex-direction: column;
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .adminvr-search-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .adminvr-date-input,
+    .adminvr-month-input {
+        width: 100%;
+        min-width: unset;
+    }
+}

@@ -1,0 +1,189 @@
+.super_rooftop_reg_container {
+  height: 47.5vw;
+  width: 99.8%;
+}
+
+.super_rooftop_reg_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  /* margin-top: 2vw; */
+}
+
+.super_rooftop_reg_header h4 {
+  margin: 0vw 35vw;
+  font-size: 1.7vw;
+}
+
+.super_rooftop_reg_content {
+  display: flex;
+  height: auto;
+  padding-bottom: 3vw;
+}
+
+.super_rooftop_reg_main {
+  height: 100%;
+  width: 60%;
+}
+
+.super_rooftop_reg_filters {
+  border-radius: 1vw;
+  background-color: #3d7e7e;
+  display: flex;
+  align-items: center;
+  padding: 0.7vw 0vw;
+  margin-top: 1vw;
+  margin-left: 6.5vw;
+  width: 38.5vw;
+}
+
+.super_rooftop_reg_search_input {
+  border: none;
+  background-color: rgb(184, 182, 182);
+  border-radius: 0.5vw;
+  padding-top: 0.7vw;
+  padding-bottom: 0.7vw;
+  padding-left: 1vw;
+  padding-right: 4vw;
+  margin-right: 1vw;
+  font-size: 1.2vw;
+}
+
+.super_rooftop_reg_search_btn {
+  padding: 0.5vw 1vw;
+  background-color: rgb(184, 182, 182);
+  border-radius: 0.5vw;
+}
+
+.super_rooftop_reg_search_btn img {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.super_rooftop_reg_search_container {
+  display: flex;
+  margin-left: 1vw;
+  border-radius: 0.5vw;
+}
+
+.super_rooftop_reg_city_select {
+  margin-left: 3vw;
+  padding: 0.6vw 1vw;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  background-color: rgb(184, 182, 182);
+}
+
+.super_rooftop_reg_table_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  margin-left: 6.5vw;
+  width: 90vw;
+}
+
+.super_rooftop_reg_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #3d7e7e;
+  color: white;
+}
+
+.super_rooftop_reg_table th,
+.super_rooftop_reg_table td {
+  border: 1px solid #4e9c9c;
+  text-align: center;
+  padding: 0.5vw;
+}
+
+.super_rooftop_reg_table td.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.super_rooftop_reg_view_btn {
+  background-color: #254444;
+  border: none;
+  padding: 1vw 1vw;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 3vw;
+  text-align: center;
+  width: 10vw;
+}
+
+.super_rooftop_reg_view_btn:hover {
+  background-color: #1a3333;
+}
+
+.super_rooftop_reg_accept_btn {
+  background-color: #32a7a7;
+  color: white;
+  border: none;
+  padding: 1vw 1vw;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-weight: bold;
+  min-width: 3vw;
+  text-align: center;
+  width: 10vw;
+}
+
+.super_rooftop_reg_reject_btn {
+  background-color: #fca606;
+  color: white;
+  border: none;
+  padding: 1vw 1vw;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-weight: bold;
+  min-width: 3vw;
+  text-align: center;
+  width: 10vw;
+}
+
+.super_rooftop_reg_image img {
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+}
+
+.super_rooftop_reg_loading {
+  text-align: center;
+  margin-top: 2vw;
+  color: #3d7e7e;
+  font-size: 1.2vw;
+}
+
+.super_rooftop_reg_error {
+  text-align: center;
+  margin-top: 2vw;
+  color: #f44336;
+  font-size: 1.2vw;
+}
+
+.super_rooftop_reg_empty {
+  text-align: center;
+  margin-top: 2vw;
+  color: #3d7e7e;
+  font-size: 1.2vw;
+}
+
+.super_rooftop_reg_loading_spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vw;
+}

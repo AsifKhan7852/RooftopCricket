@@ -80,7 +80,7 @@
 
 .explore {
   color: black;
-  margin-top: -5vw;
+  margin-top: -2vw;
   margin-bottom: 1vw;
 }
 
@@ -260,7 +260,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .nav-link {
@@ -285,4 +285,103 @@ html, body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .main{
+  overflow-y: auto;
+
+  }
+
+   .visit_nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+    gap: 4vw;
+  }
+
+  .aboutus,
+  .signin {
+    position: relative; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .aboutus img,
+  .signin img {
+    width: 100%; 
+    height: auto;
+    margin: 0;
+  }
+
+  .aboutus a,
+  .signin a {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 4vw;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+    z-index: 1; 
+  }
+
+  .aboutus a:nth-of-type(1) { left: 15%; } 
+  .aboutus a:nth-of-type(2) { left: 65%; } 
+  
+  .signin a:nth-of-type(1) { left: 20%; } 
+  .signin a:nth-of-type(2) { left: 65%; } 
+
+  .body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .body_text,
+  .body_img {
+    width: 100%;
+    padding: 0 5vw;
+    text-align: center;
+  }
+
+  .body_text {
+    font-size: 8vw;
+    padding-left: 0;
+    margin-top: 2vw;
+  }
+
+  .visit-btn {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+  }
+
+  .visit-btn span {
+    font-size: 5vw;
+    margin-left: 2vw;
+  }
+
+  .player-image {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-top: 2vw;
+  }
+
+  .visitor_footor {
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    text-align: center;
+  }
+
+  .visitor_footor img {
+    width: 60vw;
+    height: auto;
+  }
+
+  .visitor_footor a {
+    font-size: 4vw;
+    margin: 2vw 0;
+  }
 }

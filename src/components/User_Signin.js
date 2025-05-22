@@ -121,8 +121,7 @@ export default function User_Signin(props) {
                     <hr />
                 </div>
                 <div className="usign_signup">
-                    <p>Don't have an account?</p>
-                    <Link to="/user_signup">Sign up</Link>
+                    <p>Don't have an account?   <Link to="/user_signup">Sign up</Link> </p>
                 </div>
             </div>
         </div>

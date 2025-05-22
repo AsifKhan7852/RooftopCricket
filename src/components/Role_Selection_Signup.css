@@ -1,5 +1,5 @@
 .signup_role {
-    height: 55vw;
+    max-height: 100vh;
 }
 
 .signup_select {
@@ -42,16 +42,13 @@
     color: white;
     font-weight: 500;
     text-decoration: none;
-
-    /* Smooth transition for hover */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect on buttons */
 .signup_role_selection a:hover,
 .signup_role_selection Link:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: white; /* Gold highlight on hover */
+    color: white;
     transform: scale(1.05);
     border-radius: 5px;
 }
@@ -61,8 +58,6 @@
     margin-top: -20vw;
     width: 38vw;
     height: 41vw;
-
-    /* Float up and down animation */
     animation: floatUpDown 4s ease-in-out infinite;
 }
 
@@ -72,5 +67,74 @@
     }
     50% {
         transform: translateY(-15px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .signup_role {
+        max-height: none;
+        padding-bottom: 20vw;
+    }
+
+    .signup_select {
+        margin-top: 5vw; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signup_heading h4 {
+        order: 2; 
+        font-size: 4vw;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+    }
+
+    .signup_role_selection {
+        order: 3; 
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5vw;
+    }
+
+    .signup_role_selection img {
+        width: 50vw;
+        height: 12vw;
+        margin: 0 auto;
+    }
+
+    .signup_role_selection a,
+    .signup_role_selection Link {
+        width: 50vw;
+        height: 12vw;
+        margin-top: -12vw;
+        margin-left: 25%;
+        margin-bottom: 5vw;
+        font-size: 4vw;
+    }
+
+    .signup_rolepic {
+        order: 1; 
+        width: 100%;
+    }
+
+    .signup_rolepic img {
+        float: none;
+        display: block;
+        width: 80vw;
+        height: auto;
+        margin: 0 auto; 
+        animation: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .signup_heading h4 {
+        font-size: 5vw;
+    }
+
+    .signup_role_selection a,
+    .signup_role_selection Link {
+        font-size: 4.5vw;
     }
 }

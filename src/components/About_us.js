@@ -43,13 +43,13 @@ export default function About_us() {
                         <div className='history'>
                             <h4>HISTORY</h4>
                             <p>
-                                                     We started the Rooftop Cricket website in early 2024, driven by our
-                                <br />   passion for the sport and the desire to create a unique platform for cricket
-                                enthusiasts. The <br />    idea was born during a casual rooftop match, where we
-                                realized the need for a dedicated <br />                     space to connect players,
-                                share experiences, and organize events.<br />          Since then, we've been working
-                                to bring this vision to life, focusing on community <br />                                   engagement and
-                                promoting rooftop cricket culture.
+                                We started the Rooftop Cricket website in early 2024, driven by our
+                                passion for the sport and the desire to create a unique platform for cricket
+                                enthusiasts. The idea was born during a casual rooftop match, where we
+                                realized the need for a dedicated space to connect players,
+                                share experiences, and organize events.
+                                Since then, we've been working to bring this vision to life, focusing on community
+                                engagement and promoting rooftop cricket culture.
                             </p>
                         </div>
                         <div className="achievment">
@@ -63,24 +63,24 @@ export default function About_us() {
 
                 <div className="cart">
                     <div className="cart1 animated-card">
-                        <h4>     Concept <br /> Development</h4>
+                        <h4>Concept Development</h4>
                         <p>Finalized the website idea in early 2024</p>
                     </div>
                     <div className="cart2 animated-card">
                         <h4>Website Launch</h4>
-                        <p>  Launched the beta version in June 2024</p>
+                        <p>Launched the beta version in June 2024</p>
                     </div>
                     <div className="cart3 animated-card">
-                        <h4>Community <br />Engagement</h4>
-                        <p>       Gained 500+ <br />memebers in the first <br />            month.</p>
+                        <h4>Community Engagement</h4>
+                        <p>Gained 500+ members in the first month.</p>
                     </div>
                     <div className="cart4 animated-card">
                         <h4>Event Organization</h4>
-                        <p>     Hosted our first <br />tournament in August <br />               2024.</p>
+                        <p>Hosted our first tournament in August 2024.</p>
                     </div>
                     <div className="cart5 animated-card">
                         <h4>Partnerships</h4>
-                        <p>Formed local brand <br />   partnerships by <br />  September 2024.</p>
+                        <p>Formed local brand partnerships by September 2024.</p>
                     </div>
                 </div>
 

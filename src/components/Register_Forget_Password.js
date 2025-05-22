@@ -64,7 +64,7 @@ export default function Register_Forget_Password(props) {
                 {error && <p className="error-message">{error}</p>}
             </div>
             <div className="image-section">
-                <img src={rolepic} alt="Cricket Player" />
+                <img src={rolepic} alt="Cricket Player" className="responsive-image" />
             </div>
         </div>
     );

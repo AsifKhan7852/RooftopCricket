@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 export default function Register_Navbar(props) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const storedUser = JSON.parse(localStorage.getItem("User")) || {};
     const token = storedUser.Token;
@@ -50,26 +51,41 @@ export default function Register_Navbar(props) {
         window.open(url, '_blank');
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <div className="register_navbar_wrapper" style={{backgroundColor:props.bc}}>
             <div className="register_navbar_container">
-                <div className='register_navbar_text'>
-                    <Link to='/register_home_page'>Home</Link>
-                    <Link to='/book_rooftop'>Book Roof-Top</Link>
-                    <Link to='/mybooking'>My Bookings</Link>
-                    <Link to='/faq'>View FAQ Sec</Link>
-                    <Link to='/aboutus'>About us</Link>
+                <button className="register_navbar_mobile_menu_button" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <div className={`register_navbar_text ${isMenuOpen ? 'mobile_menu_open' : ''}`}>
+                    <Link to='/register_home_page' onClick={() => setIsMenuOpen(false)}>Home</Link>
+                    <Link to='/book_rooftop' onClick={() => setIsMenuOpen(false)}>Book Roof-Top</Link>
+                    <Link to='/mybooking' onClick={() => setIsMenuOpen(false)}>My Bookings</Link>
+                    <Link to='/faq' onClick={() => setIsMenuOpen(false)}>View FAQ Sec</Link>
+                    <Link to='/aboutus' onClick={() => setIsMenuOpen(false)}>About us</Link>
                     <Link to='#' onClick={openWhatsAppChat} style={{ cursor: 'pointer' }}>Help Center</Link>
                     <div className="register_navbar_dropdown">
-                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="register_navbar_dropbtn">
-                            Account Setting ▼
-                        </button>
+                       <button 
+    onClick={() => {
+        setIsDropdownOpen(!isDropdownOpen);
+        if (window.innerWidth > 768) {
+            setIsDropdownOpen(!isDropdownOpen);
+        }
+    }} 
+    className="register_navbar_dropbtn"
+>
+    Account Setting ▼
+</button>
                         {isDropdownOpen && (
-                            <div className="register_navbar_dropdown_content">
-                                <Link to="/user_edit_profile">Edit Profile</Link>
-                                <Link to='#' onClick={handleDeleteAccount} className="register_navbar_dropdown_delete">Delete Account</Link>
-                                <Link to='/' onClick={handleLogout} className="register_navbar_dropdown_logout">Logout</Link>
-                            </div>
+                            <div className={`register_navbar_dropdown_content ${isDropdownOpen ? 'show' : ''}`}>
+    <Link to="/user_edit_profile" onClick={() => {setIsDropdownOpen(false); setIsMenuOpen(false);}}>Edit Profile</Link>
+    <Link to='#' onClick={() => {handleDeleteAccount(); setIsMenuOpen(false);}} className="register_navbar_dropdown_delete">Delete Account</Link>
+    <Link to='/' onClick={() => {handleLogout(); setIsMenuOpen(false);}} className="register_navbar_dropdown_logout">Logout</Link>
+</div>
                         )}
                     </div>
                 </div>

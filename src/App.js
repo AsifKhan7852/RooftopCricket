@@ -58,7 +58,9 @@ function App() {
 
 
 
-  const ngrok_url = 'https://b30a-175-107-226-126.ngrok-free.app';
+  // const ngrok_url = 'https://b30a-175-107-226-126.ngrok-free.app';
+  const ngrok_url = 'https://ba63-175-107-226-126.ngrok-free.app';
+
 
 
   return (
@@ -122,15 +124,15 @@ function App() {
       <Router>
         <Routes>
 
-          <Route path="/" element={<Visitor_Home_Page />} />
-          <Route path="/visitor_signup" element={<Role_Selection_Signup />} />
-          <Route path="/user_signin" element={<User_Signin ngrok_url={ngrok_url} />} />
-          <Route path="/register_forget_password" element={<Register_Forget_Password ngrok_url={ngrok_url} />} />
-          <Route path="/register_forget_otp" element={<Register_Forget_OTP ngrok_url={ngrok_url} />} />
-          <Route path="/register_newpassword" element={<Register_NewPassword ngrok_url={ngrok_url} />} />
-          <Route path="/user_signup" element={<User_Signup ngrok_url={ngrok_url} />} />
-          <Route path="/register_home_page" element={<Registered_Home_Page ngrok_url={ngrok_url} />} />
-          <Route element={<Register_Navbar ngrok_url={ngrok_url}/>} />
+          <Route path="/" element={<Visitor_Home_Page />} />    {/* responsiveness done */} 
+          <Route path="/visitor_signup" element={<Role_Selection_Signup />} />   {/* responsiveness done */} 
+          <Route path="/user_signin" element={<User_Signin ngrok_url={ngrok_url} />} />   {/* responsiveness done */} 
+          <Route path="/register_forget_password" element={<Register_Forget_Password ngrok_url={ngrok_url} />} />   {/* responsiveness done */} 
+          <Route path="/register_forget_otp" element={<Register_Forget_OTP ngrok_url={ngrok_url} />} />   {/* responsiveness done */} 
+          <Route path="/register_newpassword" element={<Register_NewPassword ngrok_url={ngrok_url} />} />    {/* responsiveness done */} 
+          <Route path="/user_signup" element={<User_Signup ngrok_url={ngrok_url} />} />       {/* responsiveness done */} 
+          <Route path="/register_home_page" element={<Registered_Home_Page ngrok_url={ngrok_url} />} />    {/* responsiveness done */} 
+          <Route element={<Register_Navbar ngrok_url={ngrok_url}/>} />    {/* responsiveness done */} 
           <Route path="/book_rooftop" element={<Registered_Book_Rooftop ngrok_url={ngrok_url} />} />
           <Route path="/rooftop_available_slots" element={<Register_Available_Slots ngrok_url={ngrok_url} />} />
           <Route path="/register_booking_form" element={<Register_Booking_Form ngrok_url={ngrok_url} />} />
@@ -139,7 +141,7 @@ function App() {
           <Route path="/register_booking_cancel" element={<Register_Booking_Cancel ngrok_url={ngrok_url} />}></Route>
           <Route path="/mybooking" element={<Register_MyBooking ngrok_url={ngrok_url} />} />
           <Route path="/user_edit_profile" element={<Register_Edit_Profile ngrok_url={ngrok_url} />} />
-          <Route path="/aboutus" element={<About_us />} />
+          <Route path="/aboutus" element={<About_us />} />    {/* responsiveness done */} 
           <Route path="/faq" element={<Faq ngrok_url={ngrok_url} />} />
 
           <Route path="/admin_signup" element={<Admin_Signup />} />

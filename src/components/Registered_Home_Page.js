@@ -9,25 +9,25 @@ import Register_Navbar from "./Register_Navbar";
 export default function Registered_Home_Page() {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //     // Redirect to '/' if no token is found
-  //     const gettoken = localStorage.getItem('User'); // or sessionStorage.getItem('token')
-  //     if (!gettoken) {
-  //         navigate('/');
-  //         return;
-  //     }
+  useEffect(() => {
+      // Redirect to '/' if no token is found
+      const gettoken = localStorage.getItem('User'); // or sessionStorage.getItem('token')
+      if (!gettoken) {
+          navigate('/');
+          return;
+      }
 
-  //     // Prevent back navigation
-  //     window.history.pushState(null, "", window.location.href);
-  //     const handlePopState = () => {
-  //         window.history.pushState(null, "", window.location.href);
-  //     };
-  //     window.addEventListener("popstate", handlePopState);
+      // Prevent back navigation
+      window.history.pushState(null, "", window.location.href);
+      const handlePopState = () => {
+          window.history.pushState(null, "", window.location.href);
+      };
+      window.addEventListener("popstate", handlePopState);
 
-  //     return () => {
-  //         window.removeEventListener("popstate", handlePopState);
-  //     };
-  // }, [navigate]);
+      return () => {
+          window.removeEventListener("popstate", handlePopState);
+      };
+  }, [navigate]);
 
   return (
     <div className="rmain">

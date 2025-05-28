@@ -117,21 +117,20 @@
     overflow-y: auto;
 }
 
-.adminavailv2_message {
+/* Updated message styles */
+.adminavailv2_table td.adminavailv2_message {
     text-align: center;
     font-size: 1.2vw;
     font-weight: 500;
-    padding: 0.5vw;
+    padding: 1vw;
 }
 
-.adminavailv2_message.success {
-    color: #155724;
+.adminavailv2_table td.adminavailv2_message.success {
+    color: #90EE90;
     background-color: #3d7e7e;
-    border: 1px solid #c3e6cb;
 }
 
-.adminavailv2_message.error {
-    color: #721c24;
+.adminavailv2_table td.adminavailv2_message.error {
+    color: #ffcccb;
     background-color: #3d7e7e;
-    border: 1px solid #f5c6cb;
 }

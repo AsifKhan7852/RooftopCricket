@@ -7,10 +7,9 @@ import img5 from '../Images/bottom-bar1.png';
 import Admin_Navbar from './Admin_Navbar';
 
 export default function Admin_Home_Page() {
- const navigate = useNavigate();
+    const navigate = useNavigate();
     useEffect(() => {
-
-     const gettoken = localStorage.getItem('adminsignin'); // or sessionStorage.getItem('token')
+        const gettoken = localStorage.getItem('adminsignin');
         if (!gettoken) {
             navigate('/');
             return;
@@ -27,7 +26,7 @@ export default function Admin_Home_Page() {
         return () => {
             window.removeEventListener("popstate", handlePopState);
         };
-    }, []);
+    }, [navigate]);
 
     return (
         <div className='amain'>

@@ -1,8 +1,6 @@
-/* Wrapper to replace the image with background color */
 .admin_navbar_wrapper {
-  background-color: #2CDA9D; /* Replace with actual hex code if different */
+    background-color: #2CDA9D;
     width: 100%;
-    /* margin-top: 2.7vw; */
     animation: slideInFromTop 0.5s ease-out;
     border-radius: 0.5vw;
 }
@@ -33,7 +31,6 @@
 
 .admin_navbar_text a:hover {
     color: white;
-
 }
 
 /* Dropdown containers */
@@ -59,7 +56,6 @@
 .admin_navbar_account_dropbtn:hover {
     color: white;
     background-color: transparent;
-
 }
 
 /* Dropdown content containers */
@@ -105,13 +101,98 @@
     color: black;
 }
 
-/* Removed image, no longer needed */
-/* .admin_navbar_image {
-    height: 100%;
-    width: 83vw;
-    margin-right: 9vw;
-    margin-left: -75vw;
-} */
+.hamburger_menu {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+@media (max-width: 800px) {
+    .admin_navbar_wrapper {
+        margin-bottom: 15vw; /* Increased from 5vw */
+    }
+
+    .admin_navbar_container {
+        height: auto;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .hamburger_menu {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .admin_navbar_text {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+        background-color: #2CDA9D;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        z-index: 1000;
+        overflow-y: auto; /* Added vertical scrollbar */
+        max-height: 80vh; /* Limit height to trigger scrollbar */
+        scrollbar-width: thin;
+    }
+
+    .admin_navbar_text::-webkit-scrollbar {
+        width: 1vw;
+    }
+
+    .admin_navbar_text::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    .admin_navbar_text.mobile_menu_open {
+        display: flex;
+    }
+
+    .admin_navbar_text a {
+        font-size: 4vw;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .admin_navbar_dropbtn,
+    .admin_navbar_account_dropbtn {
+        font-size: 4vw;
+        padding: 0.5rem;
+    }
+
+    .admin_navbar_dropdown,
+    .admin_navbar_account_dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin_navbar_dropdown_content,
+    .admin_navbar_account_dropdown_content {
+        position: static;
+        width: 100%;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #e6f7f0;
+    }
+
+    .admin_navbar_dropdown_content a,
+    .admin_navbar_account_dropdown_content a {
+        font-size: 3.5vw;
+        padding: 0.5rem;
+    }
+}
 
 @keyframes slideInFromTop {
     0% {

@@ -108,12 +108,12 @@ export default function Admin_Signin({ ngrok_url }) {
                 <p>Enter your Credentials to access your account</p>
                 <br />
                 <form onSubmit={handleLogin} className="admin-signin-form">
-                    <label htmlFor="emailOrPhone">Email address or Phone No</label>
+                    <label htmlFor="emailOrPhone">Email address </label>
                     <br />
                     <input
                         type="text"
                         id="emailOrPhone"
-                        placeholder="Enter your email address or phone number"
+                        placeholder="Enter your email address"
                         value={emailOrPhone}
                         onChange={(e) => setEmailOrPhone(e.target.value)}
                         size={55}

@@ -248,10 +248,6 @@ export default function Super_Manage_Faq(props) {
                         </div>
                     </div>
                 </div>
-
-                <div className="super-manage-faq-img">
-                    <img src={img1} alt="" />
-                </div>
             </div>
             <div className="super-faq-btn">
                 <button onClick={handleAddNew} className="super-faq-button add">Add New</button>

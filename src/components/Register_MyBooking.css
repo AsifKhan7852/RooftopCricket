@@ -1,13 +1,15 @@
 .mybooking {
-    height: 50vw;
+    height: 100vh;
     width: 100vw;
-    overflow-y: auto; /* Single scroll on whole component */
+    overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
 }
 
 .mybooking::-webkit-scrollbar {
-    width: 0.5vw;
+    width: 1vw;
 }
 
 .mybooking::-webkit-scrollbar-thumb {
@@ -34,13 +36,20 @@
     justify-content: center;
     padding: 20px;
     margin-top: -1vw;
-    /* Removed overflow to allow whole container to scroll */
     margin-bottom: 3vw;
+    flex-grow: 1;
+}
+
+.table-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .custom-table {
     border: 2px solid rgb(0, 4, 255);
     width: 95%;
+    min-width: 700px;
     border-collapse: collapse;
     background-color: #378685;
     border-radius: 10px;
@@ -132,7 +141,6 @@
 }
 
 .popup-overlay {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -143,7 +151,6 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    overflow: auto;
 }
 
 .popup-content {
@@ -156,4 +163,41 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     width: 25vw;
+}
+
+@media (max-width: 800px) {
+
+
+    .head {
+        height: 10vw;
+    }
+
+    .head h4 {
+        margin: 0 10vw;
+        font-size: 4vw;
+    }
+
+    .table-container {
+        padding: 10px;
+        margin-top: 0;
+        margin-bottom: 5vw;
+    }
+
+    .custom-table th {
+        font-size: 3vw;
+        padding: 8px;
+    }
+
+    .custom-table td {
+        font-size: 2.5vw;
+        padding: 10px;
+    }
+
+    .reschedule-btn {
+        width: 20vw;
+    }
+
+    .custom-table {
+        min-width: 700px;
+    }
 }

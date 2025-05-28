@@ -1,6 +1,6 @@
 .main {
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   font-size: calc(1rem + 0.25vw);
 }
 
@@ -8,6 +8,7 @@
   margin-top: 2.5vw;
   display: flex;
   justify-content: space-between;
+  font-size: 1.3vw;
 }
 
 .aboutus,
@@ -54,7 +55,7 @@
 }
 
 .body {
-  height: 78%;
+  height: 100%;
   display: flex;
 }
 
@@ -192,6 +193,7 @@
   opacity: 0;
   transform: translateY(1.25rem);
   transition: all 0.6s ease-out 0.4s;
+  font-size: 1.5vw;
 }
 
 .visitor_footor.animate {
@@ -238,7 +240,6 @@
   margin-top: 1vw;
   font-weight: bold;
   color: black;
-  text-decoration: none;
 }
 
 .bounce-animate {
@@ -269,7 +270,8 @@ html, body {
 }
 
 .nav-link:hover {
-  color: #fafbfa;
+ text-decoration: none;
+ color: white;
 }
 
 .nav-link::after {
@@ -285,4 +287,10 @@ html, body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* ✅ Added to prevent underline on hover for these specific links */
+.aboutus a::after,
+.signin a::after {
+  content: none !important;
 }

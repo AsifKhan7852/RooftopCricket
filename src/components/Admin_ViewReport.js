@@ -160,7 +160,7 @@ export default function Admin_ViewReport(props) {
                 
                 <div className='adminvr-metric-card'>
                     <span className='adminvr-metric-label'>Total Revenue</span>
-                    <span className='adminvr-metric-value'>${metrics.totalRevenue}</span>
+                    <span className='adminvr-metric-value'>pkr {metrics.totalRevenue}</span>
                 </div>
             </div>
         </div>

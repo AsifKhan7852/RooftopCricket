@@ -1,8 +1,7 @@
-// Admin_Manage_Booked.jsx
 import React, { useState, useEffect } from 'react';
 import './Admin_Manage_Booked.css';
 import search from '../Images/search.png';
-import Register_Booking_Update from './Register_Booking_Update';
+import Admin_Booking_Update from './Admin_Booking_Update';
 import Admin_Navbar from './Admin_Navbar';
 
 export default function Admin_Manage_Booked(props) {
@@ -310,7 +309,7 @@ export default function Admin_Manage_Booked(props) {
             {showUpdatePopup && (
                 <div className="popup-overlay">
                     <div className="popup-content">
-                        <Register_Booking_Update
+                        <Admin_Booking_Update
                             booking={selectedBooking}
                             onClose={() => setShowUpdatePopup(false)}
                             onUpdateSuccess={fetchBookings}

@@ -39,10 +39,8 @@ export default function Register_MyBooking(props) {
             }
 
             const data = await response.json();
-            console.log("Fetched Bookings:", data);
             setBookings(data);
         } catch (error) {
-            console.error("Error fetching bookings:", error);
             setError(error.message);
         } finally {
             setLoading(false);
@@ -74,7 +72,6 @@ export default function Register_MyBooking(props) {
             alert("Booking canceled successfully!");
             fetchBookings();
         } catch (error) {
-            console.error("Error canceling booking:", error);
             alert("Failed to cancel booking. Please try again.");
         }
     };
@@ -86,7 +83,7 @@ export default function Register_MyBooking(props) {
 
     return (
         <div className='mybooking'>
-     <Register_Navbar bc="#3E8989"/>
+            <Register_Navbar bc="#3E8989" />
             <div className="head">
                 <h4>Your Booked Slots</h4>
             </div>
@@ -99,58 +96,60 @@ export default function Register_MyBooking(props) {
                 ) : bookings.length === 0 ? (
                     <p>No bookings found.</p>
                 ) : (
-                    <table className="custom-table">
-                        <thead>
-                            <tr>
-                                <th>Rooftop Name</th>
-                                <th>Slot Date</th>
-                                <th>Slot Time</th>
-                                <th>Paid Amount</th>
-                                <th>Payable Amount</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {bookings.map((booking) => (
-                                <tr key={booking.bookingId}>
-                                    <td>{booking.rooftopName}</td>
-                                    <td>{booking.slotDate}</td>
-                                    <td>{`${booking.slots.startTime} - ${booking.slots.endTime}`}</td>
-                                    <td>{booking.amountPaid}</td>
-                                    <td>{booking.amountPayable}</td>
-                                    <td className="action-buttons">
-                                        <button
-                                            className="cancel-btn"
-                                            disabled={!booking.canModify}
-                                            onClick={() => handleCancelBooking(booking.bookingId)}
-                                        >
-                                            Cancel
-                                        </button>
-                                        <button
-                                            className="update-btn"
-                                            disabled={!booking.canModify}
-                                            onClick={() => {
-                                                setendpointName("update");
-                                                handleReschedule_UpdateClick(booking);
-                                            }}
-                                        >
-                                            Update
-                                        </button>
-                                        <button
-                                            className="reschedule-btn"
-                                            disabled={booking.status !== "Rescheduled"}
-                                            onClick={() => {
-                                                setendpointName("reschedule");
-                                                handleReschedule_UpdateClick(booking);
-                                            }}
-                                        >
-                                            Re-Schedule
-                                        </button>
-                                    </td>
+                    <div className="table-scroll-wrapper">
+                        <table className="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Rooftop Name</th>
+                                    <th>Slot Date</th>
+                                    <th>Slot Time</th>
+                                    <th>Paid Amount</th>
+                                    <th>Payable Amount</th>
+                                    <th>Action</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {bookings.map((booking) => (
+                                    <tr key={booking.bookingId}>
+                                        <td>{booking.rooftopName}</td>
+                                        <td>{booking.slotDate}</td>
+                                        <td>{`${booking.slots.startTime} - ${booking.slots.endTime}`}</td>
+                                        <td>{booking.amountPaid}</td>
+                                        <td>{booking.amountPayable}</td>
+                                        <td className="action-buttons">
+                                            <button
+                                                className="cancel-btn"
+                                                disabled={!booking.canModify}
+                                                onClick={() => handleCancelBooking(booking.bookingId)}
+                                            >
+                                                Cancel
+                                            </button>
+                                            <button
+                                                className="update-btn"
+                                                disabled={!booking.canModify}
+                                                onClick={() => {
+                                                    setendpointName("update");
+                                                    handleReschedule_UpdateClick(booking);
+                                                }}
+                                            >
+                                                Update
+                                            </button>
+                                            <button
+                                                className="reschedule-btn"
+                                                disabled={booking.status !== "Rescheduled"}
+                                                onClick={() => {
+                                                    setendpointName("reschedule");
+                                                    handleReschedule_UpdateClick(booking);
+                                                }}
+                                            >
+                                                Re-Schedule
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 )}
             </div>
 

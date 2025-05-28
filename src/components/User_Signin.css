@@ -1,16 +1,22 @@
+/* Container fills full viewport height */
 .usign_container {
-    height: 47.4vw;
+    height: 100vh;
     display: flex;
+    flex-direction: row;
+    overflow: hidden;
 }
 
+/* Image section takes 50% width and full height */
 .usign_img_wrapper {
-    height: 99%;
     width: 50%;
+    height: 100%;
+    flex-shrink: 0;
 }
 
 .usign_img_wrapper img {
-    width: 97%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     animation: floatImg 3s ease-in-out infinite;
 }
 
@@ -23,10 +29,13 @@
     }
 }
 
+/* Text section takes remaining 50% */
 .usign_text_section {
-    height: 93%;
     width: 50%;
-    padding-top: 3vw;
+    height: 100%;
+    padding: 3vw;
+    box-sizing: border-box;
+    overflow-y: auto;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -63,7 +72,7 @@
 
 .usign_forget {
     float: right;
-    margin-right: 21vw;
+    margin-right: 15vw;
     color: rgb(5, 196, 154);
     cursor: pointer;
     transition: color 0.3s;
@@ -75,9 +84,9 @@
     text-decoration: underline;
 }
 
-/* Reuse width for all inputs and match button */
 .usign_input {
-    width: 28vw;
+    width: 100%;
+    max-width: 28vw;
 }
 
 .usign_form input {
@@ -102,7 +111,8 @@
     font-weight: bold;
     font-size: 1.1vw;
     margin-top: 1vw;
-    width: 29.3vw;
+    width: 100%;
+    max-width: 29.3vw;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -122,8 +132,9 @@
 .usign_or {
     display: flex;
     align-items: center;
-    width: 31vw;
-    margin: 1vw 0 0 0vw;
+    width: 100%;
+    max-width: 29vw;
+    margin: 1vw 0;
 }
 
 .usign_or hr {
@@ -139,10 +150,11 @@
 }
 
 .usign_signup {
-    display: flex;
+ display: flex;
     align-items: center;
     margin: 0.5vw 0 0 4.5vw;
     width: fit-content;
+    
 }
 
 .usign_signup p {
@@ -173,15 +185,16 @@
     padding: 0.8vw 1vw;
     border-radius: 0.8vw;
     margin-top: 1vw;
-    width: 29.3vw;
+    width: 100%;
+    max-width: 29.3vw;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
     animation: fadeIn 0.4s ease;
 }
 
 .usign_password_container {
     position: relative;
-    display: inline-block;
-    width: 29.3vw;
+    width: 100%;
+    max-width: 29.3vw;
 }
 
 .usign_toggle_password {

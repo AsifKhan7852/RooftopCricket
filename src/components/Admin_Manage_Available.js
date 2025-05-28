@@ -54,21 +54,23 @@ export default function Admin_Manage_Available({ ngrok_url }) {
                     setSlots(data);
                 }
             } catch {
-                if (!response.ok) {
-                    setMessage(text || "Failed to fetch slots.");
-                    setMessageType("error");
-                    setSlots([]);
-                } else {
-                    setMessage("Unexpected API response format.");
-                    setMessageType("error");
-                    setSlots([]);
-                }
+                setMessage("");
+                setMessageType("error");
+                setSlots([]);
             }
         } catch (error) {
             setMessage("Failed to fetch slots.");
             setMessageType("error");
             setSlots([]);
         }
+    };
+
+    const convertTo12HourFormat = (time) => {
+        const [hour, minute] = time.split(':');
+        const hourInt = parseInt(hour, 10);
+        const ampm = hourInt >= 12 ? 'PM' : 'AM';
+        const adjustedHour = hourInt % 12 || 12;
+        return `${adjustedHour.toString().padStart(2, '0')}:${minute} ${ampm}`;
     };
 
     const handleSearch = async () => {
@@ -92,8 +94,6 @@ export default function Admin_Manage_Available({ ngrok_url }) {
         try {
             let url = `${ngrok_url}/api/Slots/filterAvailableSlots?rooftopId=${rooftopId}`;
             if (selectedDate) url += `&date=${encodeURIComponent(formatDate(selectedDate))}`;
-            if (startTime) url += `&startTime=${encodeURIComponent(startTime)}`;
-            if (endTime) url += `&endTime=${encodeURIComponent(endTime)}`;
 
             const response = await fetch(url, {
                 headers: {
@@ -110,20 +110,27 @@ export default function Admin_Manage_Available({ ngrok_url }) {
                     setMessageType("error");
                     setSlots([]);
                 } else {
-                    setSlots(data);
-                    setMessage(text || "Slots fetched successfully.");
-                    setMessageType("success");
+                    const filteredSlots = data.filter(slot => {
+                        if (endTime) {
+                            return (
+                                slot.startTime === convertTo12HourFormat(startTime) &&
+                                slot.endTime === convertTo12HourFormat(endTime)
+                            );
+                        } else {
+                            return slot.startTime === convertTo12HourFormat(startTime);
+                        }
+                    });
+
+                    setSlots(filteredSlots);
+                    setMessage(
+                        filteredSlots.length ? "" : "No matching slots found."
+                    );
+                    setMessageType(filteredSlots.length ? "success" : "error");
                 }
             } catch {
-                if (!response.ok) {
-                    setMessage(text || "Failed to search slots.");
-                    setMessageType("error");
-                    setSlots([]);
-                } else {
-                    setMessage("Invalid response format from server.");
-                    setMessageType("error");
-                    setSlots([]);
-                }
+                setMessage("Invalid response format from server.");
+                setMessageType("error");
+                setSlots([]);
             }
         } catch (error) {
             setMessage("Failed to search slots.");
@@ -226,13 +233,7 @@ export default function Admin_Manage_Available({ ngrok_url }) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {message ? (
-                                        <tr>
-                                            <td colSpan="3" className={`adminavailv2_message ${messageType}`}>
-                                                {message}
-                                            </td>
-                                        </tr>
-                                    ) : slots.length > 0 ? (
+                                    {slots.length > 0 ? (
                                         slots.map((slot) => (
                                             <tr key={slot.slotId}>
                                                 <td>{slot.date}</td>
@@ -248,7 +249,11 @@ export default function Admin_Manage_Available({ ngrok_url }) {
                                             </tr>
                                         ))
                                     ) : (
-                                        <tr></tr>
+                                        <tr>
+                                            <td colSpan="3" className={`adminavailv2_message ${messageType}`}>
+                                                {message || "No slots of current date is available;o."}
+                                            </td>
+                                        </tr>
                                     )}
                                 </tbody>
                             </table>

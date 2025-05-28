@@ -244,10 +244,6 @@ export default function ManageTerms(props) {
             </div>
           </div>
         </div>
-
-        <div className="terms_image_container">
-          <img src={mainImage} alt="" />
-        </div>
       </div>
     </div>
   );

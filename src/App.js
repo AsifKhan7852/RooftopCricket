@@ -56,9 +56,7 @@ import Super_Admin_Navbar from './components/Super_Admin_Navbar';
 
 function App() {
 
-
-
-  const ngrok_url = 'https://b30a-175-107-226-126.ngrok-free.app';
+  const ngrok_url = 'https://ce08-45-64-24-71.ngrok-free.app';
 
 
   return (

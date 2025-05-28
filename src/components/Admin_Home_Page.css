@@ -1,10 +1,14 @@
 .amain {
-    height: 52.5vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .abody {
     height: 75%;
     display: flex;
+    flex: 1;
 }
 
 .abody_text {
@@ -52,6 +56,45 @@
 .avisitor_footor img {
     height: 4.5vw;
     width: 40%;
+}
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+    .abody {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto; /* Allow body to grow naturally */
+    }
+
+    .abody_text {
+        width: 100%;
+        padding-left: 0;
+        font-size: 8vw; /* Slightly larger for readability */
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .aexplore {
+        margin-top: -2vw; /* Adjusted for tighter spacing */
+        margin-bottom: 2vw;
+    }
+
+    .abody_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .abody_img .animated-img {
+        width: 90%; /* Increased from 80% to make image larger */
+        height: 100%; /* Increased from 95% */
+        float: none; /* Remove float for centering */
+        margin-top: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Animations */

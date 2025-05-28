@@ -1,8 +1,6 @@
-/* Wrapper div replaces the image and uses same background color as the image */
 .register_navbar_wrapper {
-    background-color: #2CDA9D; /* Replace with actual hex code if different */
+    background-color: #2CDA9D;
     width: 100%;
-    /* margin-top: 2.7vw; */
     animation: slideInFromTop 0.5s ease-out;
     border-radius: 0.5vw;
 }
@@ -34,14 +32,6 @@
     color: white;
 }
 
-/* Removed image styles since we no longer use it */
-/* .register_navbar_img {
-    height: 100%;
-    width: 83vw;
-    margin-right: 9vw;
-    margin-left: -75vw;
-} */
-
 .register_navbar_dropdown {
     position: relative;
     display: inline-block;
@@ -60,8 +50,7 @@
 .register_navbar_dropbtn:hover {
     transform: scale(1.05);
     color: white;
-   background-color: transparent;
-
+    background-color: transparent;
 }
 
 .register_navbar_dropdown_content {
@@ -94,6 +83,84 @@
 .register_navbar_dropdown_content a:hover {
     background-color: #f1f1f1;
     color: black;
+}
+
+.hamburger_menu {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+@media (max-width: 800px) {
+    .register_navbar_wrapper {
+        margin-bottom: 13vw;
+        margin-top: 0vw;
+    }
+
+    .register_navbar_container {
+        height: auto;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .hamburger_menu {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .register_navbar_text {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+        background-color: #2CDA9D;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .register_navbar_text.mobile_menu_open {
+        display: flex;
+    }
+
+    .register_navbar_text a {
+        font-size: 4vw;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .register_navbar_dropbtn {
+        font-size: 4vw;
+        padding: 0.5rem;
+    }
+
+    .register_navbar_dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .register_navbar_dropdown_content {
+        position: static;
+        width: 100%;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #e6f7f0;
+    }
+
+    .register_navbar_dropdown_content a {
+        font-size: 3.5vw;
+        padding: 0.5rem;
+    }
 }
 
 @keyframes slideInFromTop {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Register_Booking_Update.css";
+import "./Admin_Booking_Update.css";
 
-export default function Register_Booking_Update({ booking, onClose, onUpdateSuccess, ngrok_url, endpointName }) {
+export default function Admin_Booking_Update({ booking, onClose, onUpdateSuccess, ngrok_url, endpointName }) {
     const [formData, setFormData] = useState({
         date: booking.slotDate || "",
         startTime: booking.startTime || "",
@@ -19,8 +19,8 @@ export default function Register_Booking_Update({ booking, onClose, onUpdateSucc
         setLoading(true);
 
         try {
-            const storedUser = JSON.parse(localStorage.getItem("User")) || {};
-            const token = storedUser.Token || "";
+            const storedUser = JSON.parse(localStorage.getItem("adminsignin")) || {};
+            const token = storedUser.token || "";
 
             const updateUrl = `${ngrok_url}/api/Booking/${endpointName}Booking`;
 

@@ -2,6 +2,10 @@
   height: 47.5vw;
   width: 99.8%;
   overflow-y: auto;
+  background-image: url('../Images/SuperAdminBody.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .manage_terms_header {
@@ -20,26 +24,20 @@
 .manage_terms_body {
   height: auto;
   display: flex;
+  justify-content: center;
 }
 
-.terms_image_container,
 .manage_terms_content {
-  width: 50%;
-  height: 100%;
-}
-
-.terms_image_container img {
-  width: 100%;
+  width: 70%;
   height: 100%;
 }
 
 .terms_section_header {
   border: 1px solid rgb(75, 233, 233);
-  background-color: rgb(4, 167, 118);
+  background-color: rgba(4, 167, 118, 0.7);
   height: 11vw;
   width: 62vw;
-  margin: 0 17vw;
-  opacity: 0.3;
+  margin: 0 auto;
   border-radius: 2vw;
   padding: 0 1vw;
 }
@@ -67,11 +65,10 @@
 
 .terms_section_body {
   border: 1px solid rgb(75, 233, 233);
-  background-color: rgb(59, 250, 193);
+  background-color: rgba(59, 250, 193, 0.7);
   height: auto;
   width: 62vw;
-  margin: 1.5vw 17vw;
-  opacity: 0.3;
+  margin: 1.5vw auto;
   border-radius: 2vw;
   padding: 1vw 1vw;
 }
@@ -87,7 +84,7 @@
 
 .term_item {
   border: 1px solid white;
-  background-color: rgb(4, 167, 118);
+  background-color: rgba(4, 167, 118, 0.7);
   margin-top: 0.5vw;
   height: auto;
   border-radius: 1vw;
@@ -237,7 +234,6 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .manage_terms_header_donot_remove_this_line
   .manage_terms_header h4 {
     font-size: 2.5vw;
     margin: 0 15vw;

@@ -1,40 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Faq.css';
 import plus from '../Images/faq_plus.png';
 import fimg from '../Images/SuperAdminBody.jpg';
 
 export default function Faq({ ngrok_url }) {
-    // State to manage the visibility of answers
     const [visibleAnswers, setVisibleAnswers] = useState({});
-
-    // State to store FAQ data fetched from the API
     const [faqData, setFaqData] = useState([]);
-
-    // Loading state for spinner
     const [loading, setLoading] = useState(true);
 
-    // Function to toggle the visibility of an answer
     const toggleAnswer = (index) => {
         setVisibleAnswers((prev) => ({
             ...prev,
-            [index]: !prev[index], // Toggle the visibility for the specific question
+            [index]: !prev[index],
         }));
     };
 
-    // Fetch FAQ data from the API
     useEffect(() => {
         const fetchFaqs = async () => {
             try {
-                const response = await fetch(
-                    `${ngrok_url}/api/Content/fetchfaqs`,
-                    {
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'ngrok-skip-browser-warning': 'true',
-                        },
-                    }
-                );
+                const response = await fetch(`${ngrok_url}/api/Content/fetchfaqs`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
+                    },
+                });
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch FAQs');
@@ -64,27 +53,19 @@ export default function Faq({ ngrok_url }) {
                 <div className="fbody fade-in">
                     <div className="ftext">
                         {faqData.map((faq, index) => (
-                            <div key={faq.id}>
-                                <div
-                                    className="faq-question"
-                                    onClick={() => toggleAnswer(index)}
-                                >
+                            <div key={faq.id} className="faq-block">
+                                <div className="faq-question" onClick={() => toggleAnswer(index)}>
                                     <p>Q: {faq.title}</p>
                                     <img
                                         src={plus}
                                         alt="Toggle Answer"
+                                        className="plus-icon"
                                         style={{
-                                            transform: visibleAnswers[index]
-                                                ? 'rotate(45deg)'
-                                                : 'rotate(0deg)',
-                                            transition: 'transform 0.3s ease',
-                                            cursor: 'pointer',
+                                            transform: visibleAnswers[index] ? 'rotate(45deg)' : 'rotate(0deg)',
                                         }}
                                     />
                                 </div>
-                                <div className="fhr">
-                                    <hr />
-                                </div>
+                                <div className="fhr"><hr /></div>
                                 {visibleAnswers[index] && (
                                     <div className="faq-answer">
                                         <p>A: {faq.description}</p>

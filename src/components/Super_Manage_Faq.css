@@ -2,6 +2,10 @@
     height: 47.5vw;
     width: 99.8%;
     overflow-y: auto;
+    background-image: url('../Images/SuperAdminBody.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .super-manage-faq-header {
@@ -20,26 +24,20 @@
 .super-manage-faq-body {
     height: auto;
     display: flex;
+    justify-content: center;
 }
 
-.super-manage-faq-img,
 .super-faq-main {
-    width: 50%;
-    height: 100%;
-}
-
-.super-manage-faq-img img {
-    width: 100%;
+    width: 70%;
     height: 100%;
 }
 
 .super-faq-header {
     border: 1px solid rgb(75, 233, 233);
-    background-color: rgb(4, 167, 118);
+    background-color: rgba(4, 167, 118, 0.7);
     height: 11vw;
     width: 62vw;
-    margin: 0 17vw;
-    opacity: 0.3;
+    margin: 0 auto;
     border-radius: 2vw;
     padding: 0 1vw;
 }
@@ -67,11 +65,10 @@
 
 .super-faq-body {
     border: 1px solid rgb(75, 233, 233);
-    background-color: rgb(59, 250, 193);
+    background-color: rgba(59, 250, 193, 0.7);
     height: auto;
     width: 62vw;
-    margin: 1.5vw 17vw;
-    opacity: 0.3;
+    margin: 1.5vw auto;
     border-radius: 2vw;
     padding: 1vw 1vw;
 }
@@ -85,7 +82,7 @@
 
 .super-faq-body-text {
     border: 1px solid white;
-    background-color: rgb(4, 167, 118);
+    background-color: rgba(4, 167, 118, 0.7);
     margin-top: 0.5vw;
     height: auto;
     border-radius: 1vw;

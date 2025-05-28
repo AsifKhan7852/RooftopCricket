@@ -10,41 +10,40 @@ export default function Registered_Home_Page() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Redirect to '/' if no token is found
-        const gettoken = localStorage.getItem('User'); // or sessionStorage.getItem('token')
+        const gettoken = localStorage.getItem('User');
         if (!gettoken) {
             navigate('/');
             return;
         }
 
-        // Prevent back navigation
-        window.history.pushState(null, "", window.location.href);
+        // Disable browser back button
+        window.history.pushState(null, '', window.location.href);
         const handlePopState = () => {
-            window.history.pushState(null, "", window.location.href);
+            window.history.pushState(null, '', window.location.href);
         };
-        window.addEventListener("popstate", handlePopState);
+        window.addEventListener('popstate', handlePopState);
 
         return () => {
-            window.removeEventListener("popstate", handlePopState);
+            window.removeEventListener('popstate', handlePopState);
         };
     }, [navigate]);
 
     return (
-        <div className='rmain'>
+        <div className="rmain">
             <Register_Navbar />
             <div className="rbody">
                 <div className="rbody_text">
                     <p style={{ fontFamily: 'Rogbold' }}>Game On, Above The City</p>
-                    <p className='rexplore' style={{ fontFamily: 'Rogbold' }}>Rooftop Cricket</p>
+                    <p className="rexplore" style={{ fontFamily: 'Rogbold' }}>Rooftop Cricket</p>
                 </div>
                 <div className="rbody_img">
-                    <img src={img3} alt="" />
+                    <img src={img3} alt="Cricket" />
                 </div>
             </div>
 
             <div className="rvisitor_footor">
-                <img src={img4} alt="" />
-                <img src={img5} alt="" />
+                <img src={img4} alt="Bar 1" />
+                <img src={img5} alt="Bar 2" />
             </div>
         </div>
     );
